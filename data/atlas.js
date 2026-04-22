@@ -1,0 +1,88 @@
+/* data/atlas.js — pin data for the interactive world map */
+
+const ATLAS_MYTHS = {
+  greek: {
+    lon: 22, lat: 38, color: '#7ab4e0',
+    region: 'Mediterraneo — Europa', name: 'Greco-Romana',
+    desc: "Il pantheon dell'Olimpo, gli eroi epici e il cosmo tra Caos primordiale e Armonia divina.",
+    gods: 'Zeus · Era · Atena · Apollo · Poseidone · Ade',
+    page: 'grecia',
+  },
+  norse: {
+    lon: 10, lat: 60, color: '#26c8c0',
+    region: 'Scandinavia — Nord Europa', name: 'Norrena',
+    desc: "L'Yggdrasil cosmico, i Nove Mondi e il destino immutabile del Ragnarök.",
+    gods: 'Odino · Thor · Loki · Freya · Tyr · Baldur',
+    page: 'norrena',
+  },
+  egyptian: {
+    lon: 30, lat: 26, color: '#f5c060',
+    region: 'Africa del Nord — Nilo', name: 'Egizia',
+    desc: "Il ciclo eterno del sole, il Duat come regno dei morti e la bilancia cosmica di Maʿat.",
+    gods: 'Ra · Osiride · Iside · Seth · Horus · Anubi',
+    page: 'egitto',
+  },
+  mesopotamia: {
+    lon: 44, lat: 33, color: '#e8b870',
+    region: 'Medio Oriente Antico', name: 'Mesopotamica',
+    desc: "Le prime epopee scritte: la creazione, il diluvio e la ricerca dell'immortalità.",
+    gods: 'Marduk · Inanna · Enlil · Enki · Gilgamesh',
+    page: 'mesopotamia',
+  },
+  arabic: {
+    lon: 45, lat: 24, color: '#c8a0f0',
+    region: 'Medio Oriente — Arabia', name: 'Araba',
+    desc: "I Jinn di fuoco, l'Anqa fenice leggendaria e i segreti delle Mille e una Notte.",
+    gods: "Al-Lāt · Al-Uzzá · Manat · Hubal · Jinn",
+    page: 'araba',
+  },
+  hindu: {
+    lon: 78, lat: 22, color: '#d4a0f0',
+    region: 'Asia Meridionale — India', name: 'Indù',
+    desc: "La Trimurti, il ciclo cosmico degli Yuga e la danza di Shiva che distrugge e ricrea.",
+    gods: 'Brahma · Vishnu · Shiva · Lakshmi · Durga · Ganesha',
+    page: 'indu',
+  },
+  chinese: {
+    lon: 105, lat: 35, color: '#ffa040',
+    region: 'Asia Orientale — Cina', name: 'Cinese',
+    desc: "Pangu divide Cielo e Terra, Nüwa plasma l'umanità, i Draghi custodiscono i fiumi.",
+    gods: "Pangu · Nüwa · Giada Imperatore · Nezha · Chang'e",
+    page: 'cinese',
+  },
+  japanese: {
+    lon: 138, lat: 36, color: '#f5b8c8',
+    region: 'Asia Orientale — Giappone', name: 'Giapponese',
+    desc: "Amaterasu dea del sole e gli spiriti kami che pervadono ogni cosa nella natura.",
+    gods: 'Amaterasu · Susanoo · Izanagi · Izanami · Raijin',
+    page: 'giapponese',
+  },
+  celtic: {
+    lon: -8, lat: 53, color: '#8ed4a0',
+    region: 'Irlanda, Galles, Bretagna', name: 'Celtica',
+    desc: "I Tuatha Dé Danann, l'Altro Mondo oltre il velo e le nebbie sacre di Avalon.",
+    gods: 'Dagda · Morrigan · Lugh · Brigid · Cernunnos',
+    page: 'celtica',
+  },
+  slavic: {
+    lon: 28, lat: 52, color: '#b0d8e8',
+    region: 'Europa Orientale', name: 'Slava',
+    desc: "Perun e Veles in eterno conflitto, la Baba Yaga e gli spiriti della neve.",
+    gods: 'Perun · Veles · Mokosh · Svarog · Marzanna',
+    page: 'slava',
+  },
+  african: {
+    lon: 20, lat: 5, color: '#ffc050',
+    region: 'Africa Subsahariana', name: 'Africane',
+    desc: "Anansi il ragno-astuto, gli Orishas Yoruba e la forza vitale del Ntu Bantu.",
+    gods: 'Anansi · Shango · Oshun · Yemoja · Ogun',
+    page: 'africana',
+  },
+  maya: {
+    lon: -99, lat: 19, color: '#8ed460',
+    region: 'Mesoamerica', name: 'Maya & Azteca',
+    desc: "Quetzalcoatl, il Popol Vuh e i cinque soli creati e distrutti prima del nostro.",
+    gods: 'Quetzalcoatl · Tlaloc · Huitzilopochtli · Itzamná',
+    page: 'maya',
+  },
+};

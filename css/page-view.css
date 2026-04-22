@@ -1,0 +1,3 @@
+/* page-view.css — SPA page visibility */
+.page-view          { display: none; }
+.page-view.active   { display: block; }
