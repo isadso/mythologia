@@ -1,0 +1,136 @@
+════════════════════════════════════════════════════════════════════════════════
+PATCH — css/myth-page.css
+════════════════════════════════════════════════════════════════════════════════
+
+Apri css/myth-page.css. Trova le classi esistenti `.mph-bg-mesopotamia` e
+`.mph-bg-egyptian`. Subito dopo di esse (o in fondo al file), AGGIUNGI queste
+5 nuove classi per l'hub celtico e le 4 sotto-tradizioni.
+
+Ogni gradiente è stato scelto per evocare il paesaggio e la cromia della
+singola tradizione: verdi primordiali per l'Irlanda, viola-notte per il
+Galles magico, verde-oliva continentale per la Gallia, blu-Atlantico per
+la Scozia insulare. L'hub principale è un verde celtico universale.
+
+────────────────────────────────────────────────────────────────────────────────
+
+/* ─── Mitologia Celtica — Hub (verde celtico universale con nebbia) ─── */
+.mph-bg-celtic-hub {
+  background:
+    radial-gradient(ellipse at 30% 20%, rgba(142,212,160,.28) 0%, transparent 55%),
+    radial-gradient(ellipse at 75% 75%, rgba(90,165,100,.32) 0%, transparent 60%),
+    linear-gradient(160deg,
+      #06100a 0%,
+      #0e2512 18%,
+      #1a4020 38%,
+      #2d6030 55%,
+      #4a8a4a 72%,
+      #7ab58a 88%,
+      #c0e0c8 100%);
+}
+.mph-bg-celtic-hub::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(200,230,200,.12) 0%, transparent 30%),
+    radial-gradient(circle at 80% 30%, rgba(160,220,180,.10) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+/* ─── Celtica Irlandese (verde-smeraldo del paesaggio gaelico) ─── */
+.mph-bg-celtic-irish {
+  background:
+    radial-gradient(ellipse at 25% 30%, rgba(120,200,140,.30) 0%, transparent 60%),
+    linear-gradient(165deg,
+      #04100a 0%,
+      #0a2510 15%,
+      #144025 32%,
+      #206030 50%,
+      #3a8a48 68%,
+      #6ab06e 82%,
+      #a0d0a8 95%,
+      #d8eadb 100%);
+}
+.mph-bg-celtic-irish::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse at 60% 70%, rgba(180,220,180,.15) 0%, transparent 50%);
+  pointer-events: none;
+}
+
+/* ─── Celtica Gallese (viola-notte del Mabinogion, nebbia dell'Annwn) ─── */
+.mph-bg-celtic-welsh {
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(150,120,200,.25) 0%, transparent 55%),
+    linear-gradient(165deg,
+      #08040f 0%,
+      #140a28 18%,
+      #261845 38%,
+      #3d2a6a 55%,
+      #5a4a90 72%,
+      #8a7ab5 85%,
+      #c0b0d8 95%,
+      #e0d0ee 100%);
+}
+.mph-bg-celtic-welsh::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 30% 70%, rgba(180,140,220,.18) 0%, transparent 45%),
+    radial-gradient(circle at 85% 50%, rgba(220,200,240,.12) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+/* ─── Celtica Gallica (verde-oliva continentale, calderoni e querceti) ─── */
+.mph-bg-celtic-gallic {
+  background:
+    radial-gradient(ellipse at 40% 40%, rgba(160,180,100,.25) 0%, transparent 58%),
+    linear-gradient(160deg,
+      #05080a 0%,
+      #0e1510 15%,
+      #1f2a18 32%,
+      #3a4a28 50%,
+      #5a6a38 65%,
+      #858a4a 78%,
+      #b0b080 90%,
+      #d8d5a8 100%);
+}
+.mph-bg-celtic-gallic::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(circle at 25% 85%, rgba(200,180,120,.12) 0%, transparent 40%),
+    radial-gradient(circle at 75% 25%, rgba(180,200,140,.10) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+/* ─── Celtica Insulare (blu-Atlantico, Highlands, Isola di Man) ─── */
+.mph-bg-celtic-insular {
+  background:
+    radial-gradient(ellipse at 50% 30%, rgba(120,170,200,.24) 0%, transparent 55%),
+    linear-gradient(170deg,
+      #04080e 0%,
+      #08141f 15%,
+      #0f2538 30%,
+      #1a3a52 45%,
+      #2a5878 60%,
+      #4a85a5 75%,
+      #8ab5d0 88%,
+      #c8dcea 100%);
+}
+.mph-bg-celtic-insular::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 15% 60%, rgba(200,220,240,.14) 0%, transparent 40%),
+    radial-gradient(circle at 85% 80%, rgba(150,200,220,.12) 0%, transparent 35%);
+  pointer-events: none;
+}
+
+────────────────────────────────────────────────────────────────────────────────
+
+Fine patch myth-page.css.

@@ -11,21 +11,25 @@
 */
 
 const ROUTES = {
-  ''            : 'home',
-  'home'        : 'home',
-  'atlante'     : 'atlante',
-  'mesopotamia' : 'mesopotamia',
-  'grecia'      : 'grecia',
-  'egitto'      : 'egitto',
-  'norrena'     : 'norrena',
-  'giapponese'  : 'giapponese',
-  'indu'        : 'indu',
-  'maya'        : 'maya',
-  'celtica'     : 'celtica',
-  'africana'    : 'africana',
-  'cinese'      : 'cinese',
-  'slava'       : 'slava',
-  'araba'       : 'araba',
+  "": "home",
+  home: "home",
+  atlante: "atlante",
+  mesopotamia: "mesopotamia",
+  grecia: "grecia",
+  egitto: "egitto",
+  norrena: "norrena",
+  giapponese: "giapponese",
+  indu: "indu",
+  maya: "maya",
+  celtica: "celtica",
+  "celtica-irlandese": "celtica-irlandese",
+  "celtica-gallese": "celtica-gallese",
+  "celtica-gallica": "celtica-gallica",
+  "celtica-insulare": "celtica-insulare",
+  africana: "africana",
+  cinese: "cinese",
+  slava: "slava",
+  araba: "araba",
 };
 
 /* Registro globale: ogni data-file registra qui le proprie entità.
@@ -34,22 +38,26 @@ window.MYTH_ENTITIES = window.MYTH_ENTITIES || {};
 
 /* Etichetta mostrata nel pulsante "← indietro" della pagina entità */
 const MYTH_LABELS = {
-  mesopotamia : 'Mesopotamica',
-  grecia      : 'Greco-Romana',
-  egitto      : 'Egizia',
-  norrena     : 'Norrena',
-  giapponese  : 'Giapponese',
-  indu        : 'Indù',
-  maya        : 'Maya & Azteca',
-  celtica     : 'Celtica',
-  africana    : 'Africane',
-  cinese      : 'Cinese',
-  slava       : 'Slava',
-  araba       : 'Araba',
+  mesopotamia: "Mesopotamica",
+  grecia: "Greco-Romana",
+  egitto: "Egizia",
+  norrena: "Norrena",
+  giapponese: "Giapponese",
+  indu: "Indù",
+  maya: "Maya & Azteca",
+  celtica: "Celtica",
+  "celtica-irlandese": "Celtica Irlandese",
+  "celtica-gallese": "Celtica Gallese",
+  "celtica-gallica": "Celtica Gallica",
+  "celtica-insulare": "Gaelica Scozzese",
+  africana: "Africane",
+  cinese: "Cinese",
+  slava: "Slava",
+  araba: "Araba",
 };
 
 function getHashParts() {
-  return (location.hash || '#').slice(1).split('/').filter(Boolean);
+  return (location.hash || "#").slice(1).split("/").filter(Boolean);
 }
 
 function navigateTo(path) {
@@ -57,14 +65,16 @@ function navigateTo(path) {
 }
 
 function _activatePage(pageId) {
-  document.querySelectorAll('.page-view').forEach(p => p.classList.remove('active'));
-  const el = document.getElementById('page-' + pageId);
-  if (el) el.classList.add('active');
+  document
+    .querySelectorAll(".page-view")
+    .forEach((p) => p.classList.remove("active"));
+  const el = document.getElementById("page-" + pageId);
+  if (el) el.classList.add("active");
 }
 
 function _updateNavActive(route) {
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.classList.toggle('active', a.dataset.route === route);
+  document.querySelectorAll(".nav-links a").forEach((a) => {
+    a.classList.toggle("active", a.dataset.route === route);
   });
 }
 
@@ -77,13 +87,13 @@ function _lookupEntity(myth, type, id) {
 }
 
 function _renderEntityWithBack(data, type, mythRoute) {
-  if (typeof renderEntityPage !== 'function') return;
+  if (typeof renderEntityPage !== "function") return;
 
   renderEntityPage(data, type);
 
-  const backBtn = document.getElementById('e-back-btn');
+  const backBtn = document.getElementById("e-back-btn");
   if (backBtn) {
-    backBtn.innerHTML = '&larr; ' + (MYTH_LABELS[mythRoute] || 'Indietro');
+    backBtn.innerHTML = "&larr; " + (MYTH_LABELS[mythRoute] || "Indietro");
     backBtn.onclick = (e) => {
       e.preventDefault();
       navigateTo(mythRoute);
@@ -93,17 +103,17 @@ function _renderEntityWithBack(data, type, mythRoute) {
 
 function onHashChange() {
   const parts = getHashParts();
-  const page  = parts[0] || 'home';
+  const page = parts[0] || "home";
 
   // ── CASO 1: rotta entità #<mitologia>/<tipo>/<id> ──
   if (parts.length >= 3 && ROUTES[page]) {
     const mythRoute = ROUTES[page];
-    const type      = parts[1];
-    const id        = parts[2];
+    const type = parts[1];
+    const id = parts[2];
 
     const entityData = _lookupEntity(mythRoute, type, id);
     if (entityData) {
-      _activatePage('entity');
+      _activatePage("entity");
       _updateNavActive(mythRoute);
       _renderEntityWithBack(entityData, type, mythRoute);
       window.scrollTo(0, 0);
@@ -113,21 +123,21 @@ function onHashChange() {
   }
 
   // ── CASO 2: pagina semplice ──
-  const target = ROUTES[page] || 'home';
+  const target = ROUTES[page] || "home";
   _activatePage(target);
   _updateNavActive(target);
 
-  if (window['initPage_' + target]) {
-    window['initPage_' + target](parts[1] || null, parts[2] || null);
+  if (window["initPage_" + target]) {
+    window["initPage_" + target](parts[1] || null, parts[2] || null);
   }
 
   window.scrollTo(0, 0);
 }
 
 /* API pubblica: chiamata dai click handler delle varie mitologie */
-window.openEntityRoute = function(mythRoute, type, id) {
-  navigateTo(mythRoute + '/' + type + '/' + id);
+window.openEntityRoute = function (mythRoute, type, id) {
+  navigateTo(mythRoute + "/" + type + "/" + id);
 };
 
-window.addEventListener('hashchange', onHashChange);
-window.addEventListener('DOMContentLoaded', onHashChange);
+window.addEventListener("hashchange", onHashChange);
+window.addEventListener("DOMContentLoaded", onHashChange);

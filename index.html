@@ -1,431 +1,1615 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="it">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mythologia — Enciclopedia Universale delle Mitologie</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mythologia — Enciclopedia Universale delle Mitologie</title>
 
-  <!-- Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@400;700&family=Cinzel:wght@400;600&family=EB+Garamond:ital,wght@0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Styles -->
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="css/home.css">
-  <link rel="stylesheet" href="css/atlas.css">
-  <link rel="stylesheet" href="css/myth-page.css">
-  <link rel="stylesheet" href="css/page-view.css">
-</head>
-<body>
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="css/home.css" />
+    <link rel="stylesheet" href="css/atlas.css" />
+    <link rel="stylesheet" href="css/myth-page.css" />
+    <link rel="stylesheet" href="css/page-view.css" />
+  </head>
+  <body>
+    <!-- ══ NAVBAR ══ -->
+    <nav class="topnav">
+      <a href="#home" class="nav-logo">Mythologia</a>
+      <ul class="nav-links">
+        <li><a href="#home" data-route="home">Mitologie</a></li>
+        <li><a href="#atlante" data-route="atlante">Atlante</a></li>
+      </ul>
+    </nav>
 
-<!-- ══ NAVBAR ══ -->
-<nav class="topnav">
-  <a href="#home" class="nav-logo">Mythologia</a>
-  <ul class="nav-links">
-    <li><a href="#home"      data-route="home">Mitologie</a></li>
-    <li><a href="#atlante"   data-route="atlante">Atlante</a></li>
-  </ul>
-</nav>
+    <!-- ══ PAGE: HOME ══ -->
+    <div id="page-home" class="page-view active">
+      <section class="home-hero">
+        <div class="home-stars"></div>
+        <div class="globe-ring"></div>
+        <div class="globe-ring"></div>
+        <div class="home-content">
+          <span class="home-eyebrow">Un viaggio tra i miti del mondo</span>
+          <h1 class="home-title">MYTHOLOGIA</h1>
+          <p class="home-subtitle">L'Enciclopedia Universale delle Mitologie</p>
+          <p class="home-desc">
+            Dal freddo eterno del Valhalla alle foreste sacre dell'Africa
+            subsahariana, dai templi dorati dell'Egitto alle nebbie celtiche
+            dell'Irlanda antica — ogni civiltà ha tessuto i propri miti. Esplora
+            i loro mondi.
+          </p>
+          <p class="scroll-hint">↓ &nbsp; Esplora i regni &nbsp; ↓</p>
+        </div>
+      </section>
 
-<!-- ══ PAGE: HOME ══ -->
-<div id="page-home" class="page-view active">
+      <div class="home-divider">— I Regni Mitologici del Mondo —</div>
 
-  <section class="home-hero">
-    <div class="home-stars"></div>
-    <div class="globe-ring"></div>
-    <div class="globe-ring"></div>
-    <div class="home-content">
-      <span class="home-eyebrow">Un viaggio tra i miti del mondo</span>
-      <h1 class="home-title">MYTHOLOGIA</h1>
-      <p class="home-subtitle">L'Enciclopedia Universale delle Mitologie</p>
-      <p class="home-desc">
-        Dal freddo eterno del Valhalla alle foreste sacre dell'Africa subsahariana,
-        dai templi dorati dell'Egitto alle nebbie celtiche dell'Irlanda antica —
-        ogni civiltà ha tessuto i propri miti. Esplora i loro mondi.
-      </p>
-      <p class="scroll-hint">↓ &nbsp; Esplora i regni &nbsp; ↓</p>
-    </div>
-  </section>
+      <div class="myth-grid">
+        <a href="#mesopotamia" class="myth-card">
+          <div class="myth-bg bg-mesopotamia"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #e8b870">
+              Medio Oriente Antico
+            </div>
+            <div class="myth-name" style="color: #f5d4a0">Mesopotamica</div>
+            <div class="myth-desc" style="color: #d4b078">
+              Gilgamesh, Marduk, Inanna e le prime grandi epopee scritte
+              dall'umanità.
+            </div>
+          </div>
+        </a>
 
-  <div class="home-divider">— I Regni Mitologici del Mondo —</div>
+        <a href="#grecia" class="myth-card">
+          <div class="myth-bg bg-greek"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #7ab4e0">
+              Mediterraneo — Europa
+            </div>
+            <div class="myth-name" style="color: #f5d98a">Greco-Romana</div>
+            <div class="myth-desc" style="color: #c8b88a">
+              Zeus, Olimpo, eroi epici e il cosmo ordinato tra Caos e Armonia.
+            </div>
+          </div>
+        </a>
 
-  <div class="myth-grid">
+        <a href="#egitto" class="myth-card">
+          <div class="myth-bg bg-egyptian"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #f5c060">
+              Africa del Nord — Nilo
+            </div>
+            <div class="myth-name" style="color: #fae090">Egizia</div>
+            <div class="myth-desc" style="color: #e0c070">
+              Ra, Osiride, il Duat e il ciclo eterno tra morte e resurrezione.
+            </div>
+          </div>
+        </a>
 
-    <a href="#mesopotamia" class="myth-card">
-      <div class="myth-bg bg-mesopotamia"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#e8b870">Medio Oriente Antico</div>
-        <div class="myth-name"   style="color:#f5d4a0">Mesopotamica</div>
-        <div class="myth-desc"   style="color:#d4b078">Gilgamesh, Marduk, Inanna e le prime grandi epopee scritte dall'umanità.</div>
+        <a href="#norrena" class="myth-card">
+          <div class="myth-bg bg-norse"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #26c8c0">
+              Scandinavia — Nord Europa
+            </div>
+            <div class="myth-name" style="color: #c8f0ec">Norrena</div>
+            <div class="myth-desc" style="color: #8ed4d0">
+              Odino, Thor, l'Yggdrasil cosmico e il destino immutabile del
+              Ragnarök.
+            </div>
+          </div>
+        </a>
+
+        <a href="#giapponese" class="myth-card">
+          <div class="myth-bg bg-japanese"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #f5b8c8">
+              Asia Orientale — Giappone
+            </div>
+            <div class="myth-name" style="color: #fce8ef">Giapponese</div>
+            <div class="myth-desc" style="color: #f0c8d8">
+              Amaterasu, Susanoo, il mondo degli spiriti kami e le origini
+              divine del Giappone.
+            </div>
+          </div>
+        </a>
+
+        <a href="#indu" class="myth-card">
+          <div class="myth-bg bg-hindu"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #d4a0f0">
+              Asia Meridionale — India
+            </div>
+            <div class="myth-name" style="color: #f0d8ff">Indù</div>
+            <div class="myth-desc" style="color: #c8a0e0">
+              La Trimurti, il ciclo cosmico degli Yuga e la danza di Shiva che
+              distrugge per creare.
+            </div>
+          </div>
+        </a>
+
+        <a href="#maya" class="myth-card">
+          <div class="myth-bg bg-maya"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #8ed4a0">Mesoamerica</div>
+            <div class="myth-name" style="color: #c8f0a0">Maya & Azteca</div>
+            <div class="myth-desc" style="color: #9ad870">
+              Quetzalcoatl, il Popol Vuh e i cinque soli creati e distrutti
+              prima di noi.
+            </div>
+          </div>
+        </a>
+
+        <a href="#celtica" class="myth-card">
+          <div class="myth-bg bg-celtic"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #8ed4a0">
+              Irlanda, Galles, Bretagna
+            </div>
+            <div class="myth-name" style="color: #c8f0c0">Celtica</div>
+            <div class="myth-desc" style="color: #90d090">
+              I Tuatha Dé Danann, l'Altro Mondo, i druidi e le nebbie di Avalon.
+            </div>
+          </div>
+        </a>
+
+        <a href="#africana" class="myth-card">
+          <div class="myth-bg bg-african"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #ffc050">
+              Africa Subsahariana
+            </div>
+            <div class="myth-name" style="color: #ffe090">Africane</div>
+            <div class="myth-desc" style="color: #f0c060">
+              Anansi il ragno-astuto, gli Orishas Yoruba e l'albero della vita
+              Bantu.
+            </div>
+          </div>
+        </a>
+
+        <a href="#cinese" class="myth-card">
+          <div class="myth-bg bg-chinese"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #ffa040">
+              Asia Orientale — Cina
+            </div>
+            <div class="myth-name" style="color: #ffd080">Cinese</div>
+            <div class="myth-desc" style="color: #f0a040">
+              Pangu divide Cielo e Terra, Nüwa crea l'umanità, i Draghi
+              imperiali dominano i fiumi.
+            </div>
+          </div>
+        </a>
+
+        <a href="#slava" class="myth-card">
+          <div class="myth-bg bg-slavic"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #b0d8e8">
+              Europa Orientale
+            </div>
+            <div class="myth-name" style="color: #ddf0f8">Slava</div>
+            <div class="myth-desc" style="color: #a0c8d8">
+              Perun e Veles in eterno conflitto, la Baba Yaga e le fate della
+              foresta invernale.
+            </div>
+          </div>
+        </a>
+
+        <a href="#araba" class="myth-card">
+          <div class="myth-bg bg-arabic"></div>
+          <div class="myth-overlay">
+            <div class="myth-region" style="color: #c8a0f0">
+              Medio Oriente — Arabia
+            </div>
+            <div class="myth-name" style="color: #e0c8ff">Araba</div>
+            <div class="myth-desc" style="color: #b090d8">
+              I Jinn di fuoco senza fumo, l'Anqa leggendaria e i segreti delle
+              Mille e una Notte.
+            </div>
+          </div>
+        </a>
       </div>
-    </a>
 
-    <a href="#grecia" class="myth-card">
-      <div class="myth-bg bg-greek"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#7ab4e0">Mediterraneo — Europa</div>
-        <div class="myth-name"   style="color:#f5d98a">Greco-Romana</div>
-        <div class="myth-desc"   style="color:#c8b88a">Zeus, Olimpo, eroi epici e il cosmo ordinato tra Caos e Armonia.</div>
-      </div>
-    </a>
-
-    <a href="#egitto" class="myth-card">
-      <div class="myth-bg bg-egyptian"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#f5c060">Africa del Nord — Nilo</div>
-        <div class="myth-name"   style="color:#fae090">Egizia</div>
-        <div class="myth-desc"   style="color:#e0c070">Ra, Osiride, il Duat e il ciclo eterno tra morte e resurrezione.</div>
-      </div>
-    </a>
-
-    <a href="#norrena" class="myth-card">
-      <div class="myth-bg bg-norse"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#26c8c0">Scandinavia — Nord Europa</div>
-        <div class="myth-name"   style="color:#c8f0ec">Norrena</div>
-        <div class="myth-desc"   style="color:#8ed4d0">Odino, Thor, l'Yggdrasil cosmico e il destino immutabile del Ragnarök.</div>
-      </div>
-    </a>
-
-    <a href="#giapponese" class="myth-card">
-      <div class="myth-bg bg-japanese"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#f5b8c8">Asia Orientale — Giappone</div>
-        <div class="myth-name"   style="color:#fce8ef">Giapponese</div>
-        <div class="myth-desc"   style="color:#f0c8d8">Amaterasu, Susanoo, il mondo degli spiriti kami e le origini divine del Giappone.</div>
-      </div>
-    </a>
-
-    <a href="#indu" class="myth-card">
-      <div class="myth-bg bg-hindu"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#d4a0f0">Asia Meridionale — India</div>
-        <div class="myth-name"   style="color:#f0d8ff">Indù</div>
-        <div class="myth-desc"   style="color:#c8a0e0">La Trimurti, il ciclo cosmico degli Yuga e la danza di Shiva che distrugge per creare.</div>
-      </div>
-    </a>
-
-    <a href="#maya" class="myth-card">
-      <div class="myth-bg bg-maya"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#8ed4a0">Mesoamerica</div>
-        <div class="myth-name"   style="color:#c8f0a0">Maya & Azteca</div>
-        <div class="myth-desc"   style="color:#9ad870">Quetzalcoatl, il Popol Vuh e i cinque soli creati e distrutti prima di noi.</div>
-      </div>
-    </a>
-
-    <a href="#celtica" class="myth-card">
-      <div class="myth-bg bg-celtic"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#8ed4a0">Irlanda, Galles, Bretagna</div>
-        <div class="myth-name"   style="color:#c8f0c0">Celtica</div>
-        <div class="myth-desc"   style="color:#90d090">I Tuatha Dé Danann, l'Altro Mondo, i druidi e le nebbie di Avalon.</div>
-      </div>
-    </a>
-
-    <a href="#africana" class="myth-card">
-      <div class="myth-bg bg-african"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#ffc050">Africa Subsahariana</div>
-        <div class="myth-name"   style="color:#ffe090">Africane</div>
-        <div class="myth-desc"   style="color:#f0c060">Anansi il ragno-astuto, gli Orishas Yoruba e l'albero della vita Bantu.</div>
-      </div>
-    </a>
-
-    <a href="#cinese" class="myth-card">
-      <div class="myth-bg bg-chinese"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#ffa040">Asia Orientale — Cina</div>
-        <div class="myth-name"   style="color:#ffd080">Cinese</div>
-        <div class="myth-desc"   style="color:#f0a040">Pangu divide Cielo e Terra, Nüwa crea l'umanità, i Draghi imperiali dominano i fiumi.</div>
-      </div>
-    </a>
-
-    <a href="#slava" class="myth-card">
-      <div class="myth-bg bg-slavic"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#b0d8e8">Europa Orientale</div>
-        <div class="myth-name"   style="color:#ddf0f8">Slava</div>
-        <div class="myth-desc"   style="color:#a0c8d8">Perun e Veles in eterno conflitto, la Baba Yaga e le fate della foresta invernale.</div>
-      </div>
-    </a>
-
-    <a href="#araba" class="myth-card">
-      <div class="myth-bg bg-arabic"></div>
-      <div class="myth-overlay">
-        <div class="myth-region" style="color:#c8a0f0">Medio Oriente — Arabia</div>
-        <div class="myth-name"   style="color:#e0c8ff">Araba</div>
-        <div class="myth-desc"   style="color:#b090d8">I Jinn di fuoco senza fumo, l'Anqa leggendaria e i segreti delle Mille e una Notte.</div>
-      </div>
-    </a>
-
-  </div>
-
-  <footer class="site-footer">
-    <p class="footer-quote">"Gli dèi si sono fatti mortali per poter morire, e poi risorgere nel racconto."</p>
-    <p class="footer-attr">— Mythologia · Enciclopedia Universale dei Miti</p>
-  </footer>
-</div>
-
-<!-- ══ PAGE: ATLANTE ══ -->
-<div id="page-atlante" class="page-view">
-  <div class="atlas-wrap">
-    <div class="atlas-header">
-      <span class="eyebrow">Atlante Interattivo</span>
-      <h1 class="atlas-title">I Regni Mitologici</h1>
-    </div>
-    <div id="map-svg-container">
-      <div id="map-loading">Caricando il planisfero...</div>
-      <div id="map-popup" class="map-popup">
-        <button class="popup-close" onclick="closeMapPopup()">&#x2715;</button>
-        <div class="popup-region" id="popup-region"></div>
-        <div class="popup-name"   id="popup-name"></div>
-        <div class="popup-desc"   id="popup-desc"></div>
-        <div class="popup-glabel">Divinità principali</div>
-        <div class="popup-gods"   id="popup-gods"></div>
-        <a  class="popup-btn"    id="popup-btn"  href="#">Entra nel regno &rarr;</a>
-        <div class="popup-arrow-down" id="popup-arrow-down"></div>
-        <div class="popup-arrow-up"   id="popup-arrow-up"></div>
-      </div>
-    </div>
-    <div class="atlas-legend">
-      <div class="legend-item"><div class="legend-dot" style="background:#7ab4e0"></div>Europa Classica</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#26c8c0"></div>Nord Europa</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#f5c060"></div>Africa del Nord</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#ffc050"></div>Africa Sub-Sahariana</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#e8b870"></div>Medio Oriente</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#d4a0f0"></div>Asia Meridionale</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#ffa040"></div>Asia Orientale</div>
-      <div class="legend-item"><div class="legend-dot" style="background:#8ed460"></div>Mesoamerica</div>
-    </div>
-  </div>
-</div>
-
-<!-- ══ PAGE: MESOPOTAMIA ══ -->
-<div id="page-mesopotamia" class="page-view">
-  <div class="myth-page-hero">
-    <div class="mph-bg mph-bg-mesopotamia"></div>
-    <div class="mph-stars"></div>
-    <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
-      <path d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z" fill="#e8a040"/>
-    </svg>
-    <div class="mph-nav"><a href="#home" class="back-btn">&larr; Mythologia</a></div>
-    <div class="mph-content">
-      <span class="eyebrow" style="color:#e8b870">Medio Oriente Antico &middot; 3500&ndash;500 a.C.</span>
-      <h1 class="mph-title gold-grad">Mitologia<br>Mesopotamica</h1>
-      <p class="mph-sub">La culla della scrittura, degli dèi e dell'epopea umana</p>
-      <div class="mph-chips">
-        <span class="chip">Sumera</span>
-        <span class="chip">Accadica</span>
-        <span class="chip">Babilonese</span>
-        <span class="chip">Assira</span>
-      </div>
-    </div>
-  </div>
-
-  <nav class="section-nav">
-    <button class="snav-btn active" onclick="showMesopSec('cosmo',this)">Cosmogonia</button>
-    <button class="snav-btn"        onclick="showMesopSec('dei',this)">Pantheon</button>
-    <button class="snav-btn"        onclick="showMesopSec('eroi',this)">Eroi</button>
-    <button class="snav-btn"        onclick="showMesopSec('miti',this)">Miti principali</button>
-  </nav>
-
-  <div class="content">
-
-    <!-- COSMOGONIA -->
-    <div class="sec-block active" id="msec-cosmo">
-      <div class="sec-head">
-        <p class="sec-ey">Le origini del cosmo</p>
-        <h2 class="sec-title">Come nacque il mondo</h2>
-        <p class="sec-intro">Prima di tutto esistevano Apsu, l'oceano primordiale di acque dolci, e Tiamat, il mare caotico e salato. Dal loro mescolamento nacquero gli dèi — e con essi il conflitto che avrebbe forgiato l'universo.</p>
-      </div>
-      <div id="mesop-cosmo-steps">
-        <div class="cosmo-step"><div class="cosmo-num">I</div><div><div class="cosmo-label">Il Caos primordiale — Apsu e Tiamat</div><div class="cosmo-text">All'inizio esiste solo il silenzio delle acque mescolate: Apsu, l'abisso d'acqua dolce maschile, e Tiamat, il mare salato femminile. Dal loro abbraccio nascono i primi dèi, il cui frastuoro disturba il riposo di Apsu che decide di distruggerli.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">II</div><div><div class="cosmo-label">La rivolta — Ea uccide Apsu</div><div class="cosmo-text">Ea, dio della saggezza, scopre il piano di Apsu. Lo addormenta con un incantesimo e lo uccide, costruendo la propria dimora sulle sue acque. Tiamat, furiosa, raduna mostri e demoni per vendicarsi.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">III</div><div><div class="cosmo-label">La battaglia cosmica — Marduk contro Tiamat</div><div class="cosmo-text">Gli dèi scelgono Marduk come campione. Armato di venti e fulmini affronta Tiamat: quando lei apre la bocca per inghiottirlo, Marduk scatena i venti nella sua gola e la trafigge. Dal suo corpo spaccato crea il cielo e la terra.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">IV</div><div><div class="cosmo-label">La creazione dell'umanità — il sangue di Kingu</div><div class="cosmo-text">Marduk uccide Kingu, comandante dell'esercito di Tiamat, e con il suo sangue crea l'umanità. Gli uomini nascono per servire gli dèi, costruire i loro templi e offrire sacrifici.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">V</div><div><div class="cosmo-label">L'ordine cosmico — Babilonia al centro del mondo</div><div class="cosmo-text">Marduk organizza il cosmo: fissa le stelle, stabilisce i mesi, crea sole e luna. Costruisce Babilonia come copia terrestre del cielo, con lo ziggurat Esagila come asse del mondo.</div></div></div>
-      </div>
+      <footer class="site-footer">
+        <p class="footer-quote">
+          "Gli dèi si sono fatti mortali per poter morire, e poi risorgere nel
+          racconto."
+        </p>
+        <p class="footer-attr">
+          — Mythologia · Enciclopedia Universale dei Miti
+        </p>
+      </footer>
     </div>
 
-    <!-- PANTHEON -->
-    <div class="sec-block" id="msec-dei">
-      <div class="sec-head">
-        <p class="sec-ey">Il Pantheon</p>
-        <h2 class="sec-title">Gli dèi di Sumer e Babilonia</h2>
-        <p class="sec-intro">Il pantheon mesopotamico conta centinaia di divinità. Al vertice siedono i grandi dèi cosmici — Anu, Enlil, Ea — affiancati da divinità della natura, della guerra e dell'oltretomba.</p>
-      </div>
-      <div class="pantheon-grid" id="mesop-pantheon"></div>
-    </div>
-
-    <!-- EROI -->
-    <div class="sec-block" id="msec-eroi">
-      <div class="sec-head">
-        <p class="sec-ey">Gli eroi leggendari</p>
-        <h2 class="sec-title">Mortali tra gli dèi</h2>
-        <p class="sec-intro">La Mesopotamia produsse i primi grandi eroi letterari della storia. La loro ricerca non è la gloria — ma il senso della vita di fronte alla morte inevitabile.</p>
-      </div>
-      <div class="hero-cards" id="mesop-heroes"></div>
-    </div>
-
-    <!-- MITI -->
-    <div class="sec-block" id="msec-miti">
-      <div class="sec-head">
-        <p class="sec-ey">I grandi miti</p>
-        <h2 class="sec-title">Le storie che fondarono l'occidente</h2>
-        <p class="sec-intro">Molti miti che conosciamo — il diluvio, la creazione, la discesa agli inferi — trovano la loro versione più antica nelle tavole cuneiformi della Mesopotamia.</p>
-      </div>
-      <div class="myths-list" id="mesop-myths"></div>
-      <hr class="divider-line">
-      <div class="page-cta">
-        <p class="cta-label">Continua l'esplorazione</p>
-        <div class="cta-btns">
-          <a href="#home"    class="cta-btn">&larr; Tutte le mitologie</a>
-          <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+    <!-- ══ PAGE: ATLANTE ══ -->
+    <div id="page-atlante" class="page-view">
+      <div class="atlas-wrap">
+        <div class="atlas-header">
+          <span class="eyebrow">Atlante Interattivo</span>
+          <h1 class="atlas-title">I Regni Mitologici</h1>
+        </div>
+        <div id="map-svg-container">
+          <div id="map-loading">Caricando il planisfero...</div>
+          <div id="map-popup" class="map-popup">
+            <button class="popup-close" onclick="closeMapPopup()">
+              &#x2715;
+            </button>
+            <div class="popup-region" id="popup-region"></div>
+            <div class="popup-name" id="popup-name"></div>
+            <div class="popup-desc" id="popup-desc"></div>
+            <div class="popup-glabel">Divinità principali</div>
+            <div class="popup-gods" id="popup-gods"></div>
+            <a class="popup-btn" id="popup-btn" href="#"
+              >Entra nel regno &rarr;</a
+            >
+            <div class="popup-arrow-down" id="popup-arrow-down"></div>
+            <div class="popup-arrow-up" id="popup-arrow-up"></div>
+          </div>
+        </div>
+        <div class="atlas-legend">
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #7ab4e0"></div>
+            Europa Classica
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #26c8c0"></div>
+            Nord Europa
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #f5c060"></div>
+            Africa del Nord
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #ffc050"></div>
+            Africa Sub-Sahariana
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #e8b870"></div>
+            Medio Oriente
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #d4a0f0"></div>
+            Asia Meridionale
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #ffa040"></div>
+            Asia Orientale
+          </div>
+          <div class="legend-item">
+            <div class="legend-dot" style="background: #8ed460"></div>
+            Mesoamerica
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-</div>
-
-<!-- ══ PAGE: ENTITY (deity / hero / myth detail) ══ -->
-<div id="page-entity" class="page-view">
-  <div class="e-hero" id="e-hero">
-    <div class="e-hero-bg"    id="e-hero-bg"></div>
-    <div class="e-hero-stars"></div>
-    <div class="e-nav"><button class="back-btn" id="e-back-btn">&larr; Indietro</button></div>
-    <div class="e-hero-inner">
-      <p  class="e-type"    id="e-type"></p>
-      <h1 class="e-title gold-grad" id="e-title"></h1>
-      <p  class="e-epithet" id="e-epithet"></p>
-      <div class="e-chips"  id="e-chips"></div>
-    </div>
-  </div>
-  <nav class="e-nav-tabs section-nav" id="e-nav-tabs" style="top:57px;"></nav>
-  <div class="e-body" id="e-body"></div>
-</div>
-
-<!-- ══ PLACEHOLDER PAGES (future) ══ -->
-<div id="page-grecia"      class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Greco-Romana — in arrivo</div></div>
-<!-- ══ PAGE: EGITTO ══ -->
-<div id="page-egitto" class="page-view">
-  <div class="myth-page-hero">
-    <div class="mph-bg mph-bg-egyptian"></div>
-    <div class="mph-stars"></div>
-    <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
-      <path d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z" fill="#f5c060"/>
-    </svg>
-    <div class="mph-nav"><a href="#home" class="back-btn">&larr; Mythologia</a></div>
-    <div class="mph-content">
-      <span class="eyebrow" style="color:#f5c060">Africa del Nord &middot; Valle del Nilo &middot; 3100 a.C.&ndash;IV sec. d.C.</span>
-      <h1 class="mph-title gold-grad">Mitologia<br>Egizia</h1>
-      <p class="mph-sub">Il pantheon del Nilo: creazione, morte, resurrezione e il ciclo eterno del sole</p>
-      <div class="mph-chips">
-        <span class="chip">Eliopoli</span>
-        <span class="chip">Menfi</span>
-        <span class="chip">Tebe</span>
-        <span class="chip">Ermopoli</span>
+    <!-- ══ PAGE: MESOPOTAMIA ══ -->
+    <div id="page-mesopotamia" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-mesopotamia"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#e8a040"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#home" class="back-btn">&larr; Mythologia</a>
+        </div>
+        <div class="mph-content">
+          <span class="eyebrow" style="color: #e8b870"
+            >Medio Oriente Antico &middot; 3500&ndash;500 a.C.</span
+          >
+          <h1 class="mph-title gold-grad">Mitologia<br />Mesopotamica</h1>
+          <p class="mph-sub">
+            La culla della scrittura, degli dèi e dell'epopea umana
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Sumera</span>
+            <span class="chip">Accadica</span>
+            <span class="chip">Babilonese</span>
+            <span class="chip">Assira</span>
+          </div>
+        </div>
       </div>
-    </div>
-  </div>
 
-  <nav class="section-nav">
-    <button class="snav-btn active" onclick="showEgiziSec('cosmo',this)">Cosmogonia</button>
-    <button class="snav-btn"        onclick="showEgiziSec('dei',this)">Pantheon</button>
-    <button class="snav-btn"        onclick="showEgiziSec('eroi',this)">Eroi</button>
-    <button class="snav-btn"        onclick="showEgiziSec('miti',this)">Miti principali</button>
-  </nav>
+      <nav class="section-nav">
+        <button class="snav-btn active" onclick="showMesopSec('cosmo', this)">
+          Cosmogonia
+        </button>
+        <button class="snav-btn" onclick="showMesopSec('dei', this)">
+          Pantheon
+        </button>
+        <button class="snav-btn" onclick="showMesopSec('eroi', this)">
+          Eroi
+        </button>
+        <button class="snav-btn" onclick="showMesopSec('miti', this)">
+          Miti principali
+        </button>
+      </nav>
 
-  <div class="content">
+      <div class="content">
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="msec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Le origini del cosmo</p>
+            <h2 class="sec-title">Come nacque il mondo</h2>
+            <p class="sec-intro">
+              Prima di tutto esistevano Apsu, l'oceano primordiale di acque
+              dolci, e Tiamat, il mare caotico e salato. Dal loro mescolamento
+              nacquero gli dèi — e con essi il conflitto che avrebbe forgiato
+              l'universo.
+            </p>
+          </div>
+          <div id="mesop-cosmo-steps">
+            <div class="cosmo-step">
+              <div class="cosmo-num">I</div>
+              <div>
+                <div class="cosmo-label">
+                  Il Caos primordiale — Apsu e Tiamat
+                </div>
+                <div class="cosmo-text">
+                  All'inizio esiste solo il silenzio delle acque mescolate:
+                  Apsu, l'abisso d'acqua dolce maschile, e Tiamat, il mare
+                  salato femminile. Dal loro abbraccio nascono i primi dèi, il
+                  cui frastuoro disturba il riposo di Apsu che decide di
+                  distruggerli.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">II</div>
+              <div>
+                <div class="cosmo-label">La rivolta — Ea uccide Apsu</div>
+                <div class="cosmo-text">
+                  Ea, dio della saggezza, scopre il piano di Apsu. Lo addormenta
+                  con un incantesimo e lo uccide, costruendo la propria dimora
+                  sulle sue acque. Tiamat, furiosa, raduna mostri e demoni per
+                  vendicarsi.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">III</div>
+              <div>
+                <div class="cosmo-label">
+                  La battaglia cosmica — Marduk contro Tiamat
+                </div>
+                <div class="cosmo-text">
+                  Gli dèi scelgono Marduk come campione. Armato di venti e
+                  fulmini affronta Tiamat: quando lei apre la bocca per
+                  inghiottirlo, Marduk scatena i venti nella sua gola e la
+                  trafigge. Dal suo corpo spaccato crea il cielo e la terra.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">IV</div>
+              <div>
+                <div class="cosmo-label">
+                  La creazione dell'umanità — il sangue di Kingu
+                </div>
+                <div class="cosmo-text">
+                  Marduk uccide Kingu, comandante dell'esercito di Tiamat, e con
+                  il suo sangue crea l'umanità. Gli uomini nascono per servire
+                  gli dèi, costruire i loro templi e offrire sacrifici.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">V</div>
+              <div>
+                <div class="cosmo-label">
+                  L'ordine cosmico — Babilonia al centro del mondo
+                </div>
+                <div class="cosmo-text">
+                  Marduk organizza il cosmo: fissa le stelle, stabilisce i mesi,
+                  crea sole e luna. Costruisce Babilonia come copia terrestre
+                  del cielo, con lo ziggurat Esagila come asse del mondo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-    <!-- COSMOGONIA -->
-    <div class="sec-block active" id="esec-cosmo">
-      <div class="sec-head">
-        <p class="sec-ey">Le origini del cosmo</p>
-        <h2 class="sec-title">Come nacque il mondo</h2>
-        <p class="sec-intro">Prima di ogni cosa esistevano solo le acque primordiali del Nun: oscure, infinite, inerti. Da questo caos cosmico emerse per autogenerazione il primo dio, e con lui ebbe inizio il tempo, la luce e la struttura dell'universo secondo la dottrina eliopolitana dell'Enneade.</p>
-      </div>
-      <div id="egizi-cosmo-steps">
-        <div class="cosmo-step"><div class="cosmo-num">I</div><div><div class="cosmo-label">Il Nun primordiale — le acque del caos</div><div class="cosmo-text">Prima della creazione esisteva solo il Nun, oceano primordiale di acque oscure, caotico e informe. Non c'era cielo né terra, non esistevano divisioni, il tempo non scorreva. Dentro il Nun giaceva il potenziale di tutte le cose, ma nulla aveva ancora forma.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">II</div><div><div class="cosmo-label">L'emersione di Atum sulla collina di Benben</div><div class="cosmo-text">Dal caos emerge per autogenerazione Atum — "la totalità" — il primo dio. Sale sulla collina primordiale di Benben, prima terra apparsa dalle acque, e prende coscienza di sé. La pietra Benben, probabilmente una meteorite venerata a Eliopoli, rappresenta il raggio solare pietrificato: da lei derivano obelischi e piramidi.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">III</div><div><div class="cosmo-label">La prima coppia — Shu e Tefnut</div><div class="cosmo-text">Atum, solo nell'universo, si autogenera: dal suo seme, saliva o respiro nascono Shu (l'aria, principio maschile) e Tefnut (l'umidità, principio femminile). Aria e umidità sono le prime distinzioni del cosmo: senza di loro la vita sarebbe impossibile.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">IV</div><div><div class="cosmo-label">La seconda coppia — Geb e Nut separati</div><div class="cosmo-text">Shu e Tefnut generano Geb (la terra) e Nut (il cielo). Ma i due fratelli-amanti sono così strettamente abbracciati che nulla può nascere tra loro. Shu li separa: solleva Nut verso l'alto formando l'arco del cielo, lascia Geb disteso sotto. Prima della separazione Nut aveva generato Osiride, Iside, Seth e Nefti.</div></div></div>
-        <div class="cosmo-step"><div class="cosmo-num">V</div><div><div class="cosmo-label">L'Enneade completa e la nascita dell'umanità</div><div class="cosmo-text">Nove divinità — Atum, Shu, Tefnut, Geb, Nut, Osiride, Iside, Seth, Nefti — costituiscono l'Enneade: l'intero universo divino è strutturato. L'umanità nasce — secondo alcune versioni dalle lacrime di Atum, secondo altre dal sudore degli dèi — e inizia la lunga storia del mondo.</div></div></div>
-      </div>
-    </div>
+        <!-- PANTHEON -->
+        <div class="sec-block" id="msec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">Il Pantheon</p>
+            <h2 class="sec-title">Gli dèi di Sumer e Babilonia</h2>
+            <p class="sec-intro">
+              Il pantheon mesopotamico conta centinaia di divinità. Al vertice
+              siedono i grandi dèi cosmici — Anu, Enlil, Ea — affiancati da
+              divinità della natura, della guerra e dell'oltretomba.
+            </p>
+          </div>
+          <div class="pantheon-grid" id="mesop-pantheon"></div>
+        </div>
 
-    <!-- PANTHEON -->
-    <div class="sec-block" id="esec-dei">
-      <div class="sec-head">
-        <p class="sec-ey">Il Pantheon</p>
-        <h2 class="sec-title">Gli dèi della Valle del Nilo</h2>
-        <p class="sec-intro">Il pantheon egizio è tra i più ricchi e antichi del mondo. Al suo vertice regnano Ra, il sole creatore, e Osiride, il signore dell'oltretomba. Accanto a loro, una moltitudine di divinità cosmiche, funerarie, artigianali e teriomorfe che hanno attraversato oltre tremila anni di storia.</p>
-      </div>
-      <div class="pantheon-grid" id="egizi-pantheon"></div>
-    </div>
+        <!-- EROI -->
+        <div class="sec-block" id="msec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Gli eroi leggendari</p>
+            <h2 class="sec-title">Mortali tra gli dèi</h2>
+            <p class="sec-intro">
+              La Mesopotamia produsse i primi grandi eroi letterari della
+              storia. La loro ricerca non è la gloria — ma il senso della vita
+              di fronte alla morte inevitabile.
+            </p>
+          </div>
+          <div class="hero-cards" id="mesop-heroes"></div>
+        </div>
 
-    <!-- EROI -->
-    <div class="sec-block" id="esec-eroi">
-      <div class="sec-head">
-        <p class="sec-ey">Gli eroi e i saggi</p>
-        <h2 class="sec-title">Tra divino e umano</h2>
-        <p class="sec-intro">L'Egitto non ha prodotto una grande epopea eroica come Mesopotamia o Grecia — ma ha elaborato figure archetipiche straordinarie: il dio-bambino perseguitato che vince l'usurpatore, e l'uomo saggio elevato al rango di divinità per i suoi meriti.</p>
-      </div>
-      <div class="hero-cards" id="egizi-heroes"></div>
-    </div>
-
-    <!-- MITI -->
-    <div class="sec-block" id="esec-miti">
-      <div class="sec-head">
-        <p class="sec-ey">I grandi miti</p>
-        <h2 class="sec-title">Le storie sacre del Nilo</h2>
-        <p class="sec-intro">Dai Testi delle Piramidi al Libro dei Morti, dai papiri del Nuovo Regno alle pareti dei templi tolemaici, la mitologia egizia ci consegna alcune delle narrazioni più influenti della storia umana — molte delle quali hanno lasciato tracce profonde nella cultura occidentale.</p>
-      </div>
-      <div class="myths-list" id="egizi-myths"></div>
-      <hr class="divider-line">
-      <div class="page-cta">
-        <p class="cta-label">Continua l'esplorazione</p>
-        <div class="cta-btns">
-          <a href="#home"    class="cta-btn">&larr; Tutte le mitologie</a>
-          <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+        <!-- MITI -->
+        <div class="sec-block" id="msec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi miti</p>
+            <h2 class="sec-title">Le storie che fondarono l'occidente</h2>
+            <p class="sec-intro">
+              Molti miti che conosciamo — il diluvio, la creazione, la discesa
+              agli inferi — trovano la loro versione più antica nelle tavole
+              cuneiformi della Mesopotamia.
+            </p>
+          </div>
+          <div class="myths-list" id="mesop-myths"></div>
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#home" class="cta-btn">&larr; Tutte le mitologie</a>
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-  </div>
-</div>
-<div id="page-norrena"     class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Norrena — in arrivo</div></div>
-<div id="page-giapponese"  class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Giapponese — in arrivo</div></div>
-<div id="page-indu"        class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Indù — in arrivo</div></div>
-<div id="page-maya"        class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Maya & Azteca — in arrivo</div></div>
-<div id="page-celtica"     class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Celtica — in arrivo</div></div>
-<div id="page-africana"    class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologie Africane — in arrivo</div></div>
-<div id="page-cinese"      class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Cinese — in arrivo</div></div>
-<div id="page-slava"       class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Slava — in arrivo</div></div>
-<div id="page-araba"       class="page-view"><div style="padding:8rem 2rem;text-align:center;font-family:'Cinzel Decorative',serif;color:#c8963e;font-size:1.2rem;">Mitologia Araba — in arrivo</div></div>
+    <!-- ══ PAGE: ENTITY (deity / hero / myth detail) ══ -->
+    <div id="page-entity" class="page-view">
+      <div class="e-hero" id="e-hero">
+        <div class="e-hero-bg" id="e-hero-bg"></div>
+        <div class="e-hero-stars"></div>
+        <div class="e-nav">
+          <button class="back-btn" id="e-back-btn">&larr; Indietro</button>
+        </div>
+        <div class="e-hero-inner">
+          <p class="e-type" id="e-type"></p>
+          <h1 class="e-title gold-grad" id="e-title"></h1>
+          <p class="e-epithet" id="e-epithet"></p>
+          <div class="e-chips" id="e-chips"></div>
+        </div>
+      </div>
+      <nav
+        class="e-nav-tabs section-nav"
+        id="e-nav-tabs"
+        style="top: 57px"
+      ></nav>
+      <div class="e-body" id="e-body"></div>
+    </div>
 
-<!-- ══ SCRIPTS ══ -->
+    <!-- ══ PLACEHOLDER PAGES (future) ══ -->
+    <div id="page-grecia" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Greco-Romana — in arrivo
+      </div>
+    </div>
+    <!-- ══ PAGE: EGITTO ══ -->
+    <div id="page-egitto" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-egyptian"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#f5c060"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#home" class="back-btn">&larr; Mythologia</a>
+        </div>
+        <div class="mph-content">
+          <span class="eyebrow" style="color: #f5c060"
+            >Africa del Nord &middot; Valle del Nilo &middot; 3100 a.C.&ndash;IV
+            sec. d.C.</span
+          >
+          <h1 class="mph-title gold-grad">Mitologia<br />Egizia</h1>
+          <p class="mph-sub">
+            Il pantheon del Nilo: creazione, morte, resurrezione e il ciclo
+            eterno del sole
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Eliopoli</span>
+            <span class="chip">Menfi</span>
+            <span class="chip">Tebe</span>
+            <span class="chip">Ermopoli</span>
+          </div>
+        </div>
+      </div>
 
-<!-- Librerie esterne -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+      <nav class="section-nav">
+        <button class="snav-btn active" onclick="showEgiziSec('cosmo', this)">
+          Cosmogonia
+        </button>
+        <button class="snav-btn" onclick="showEgiziSec('dei', this)">
+          Pantheon
+        </button>
+        <button class="snav-btn" onclick="showEgiziSec('eroi', this)">
+          Eroi
+        </button>
+        <button class="snav-btn" onclick="showEgiziSec('miti', this)">
+          Miti principali
+        </button>
+      </nav>
 
-<!-- Dati -->
-<script src="data/atlas.js"></script>
-<script src="data/mesopotamia.js"></script>
-<script src="data/egitto.js"></script>
+      <div class="content">
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="esec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Le origini del cosmo</p>
+            <h2 class="sec-title">Come nacque il mondo</h2>
+            <p class="sec-intro">
+              Prima di ogni cosa esistevano solo le acque primordiali del Nun:
+              oscure, infinite, inerti. Da questo caos cosmico emerse per
+              autogenerazione il primo dio, e con lui ebbe inizio il tempo, la
+              luce e la struttura dell'universo secondo la dottrina eliopolitana
+              dell'Enneade.
+            </p>
+          </div>
+          <div id="egizi-cosmo-steps">
+            <div class="cosmo-step">
+              <div class="cosmo-num">I</div>
+              <div>
+                <div class="cosmo-label">
+                  Il Nun primordiale — le acque del caos
+                </div>
+                <div class="cosmo-text">
+                  Prima della creazione esisteva solo il Nun, oceano primordiale
+                  di acque oscure, caotico e informe. Non c'era cielo né terra,
+                  non esistevano divisioni, il tempo non scorreva. Dentro il Nun
+                  giaceva il potenziale di tutte le cose, ma nulla aveva ancora
+                  forma.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">II</div>
+              <div>
+                <div class="cosmo-label">
+                  L'emersione di Atum sulla collina di Benben
+                </div>
+                <div class="cosmo-text">
+                  Dal caos emerge per autogenerazione Atum — "la totalità" — il
+                  primo dio. Sale sulla collina primordiale di Benben, prima
+                  terra apparsa dalle acque, e prende coscienza di sé. La pietra
+                  Benben, probabilmente una meteorite venerata a Eliopoli,
+                  rappresenta il raggio solare pietrificato: da lei derivano
+                  obelischi e piramidi.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">III</div>
+              <div>
+                <div class="cosmo-label">La prima coppia — Shu e Tefnut</div>
+                <div class="cosmo-text">
+                  Atum, solo nell'universo, si autogenera: dal suo seme, saliva
+                  o respiro nascono Shu (l'aria, principio maschile) e Tefnut
+                  (l'umidità, principio femminile). Aria e umidità sono le prime
+                  distinzioni del cosmo: senza di loro la vita sarebbe
+                  impossibile.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">IV</div>
+              <div>
+                <div class="cosmo-label">
+                  La seconda coppia — Geb e Nut separati
+                </div>
+                <div class="cosmo-text">
+                  Shu e Tefnut generano Geb (la terra) e Nut (il cielo). Ma i
+                  due fratelli-amanti sono così strettamente abbracciati che
+                  nulla può nascere tra loro. Shu li separa: solleva Nut verso
+                  l'alto formando l'arco del cielo, lascia Geb disteso sotto.
+                  Prima della separazione Nut aveva generato Osiride, Iside,
+                  Seth e Nefti.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">V</div>
+              <div>
+                <div class="cosmo-label">
+                  L'Enneade completa e la nascita dell'umanità
+                </div>
+                <div class="cosmo-text">
+                  Nove divinità — Atum, Shu, Tefnut, Geb, Nut, Osiride, Iside,
+                  Seth, Nefti — costituiscono l'Enneade: l'intero universo
+                  divino è strutturato. L'umanità nasce — secondo alcune
+                  versioni dalle lacrime di Atum, secondo altre dal sudore degli
+                  dèi — e inizia la lunga storia del mondo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
-<!-- Renderer condiviso + logiche pagina (devono girare PRIMA del router
+        <!-- PANTHEON -->
+        <div class="sec-block" id="esec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">Il Pantheon</p>
+            <h2 class="sec-title">Gli dèi della Valle del Nilo</h2>
+            <p class="sec-intro">
+              Il pantheon egizio è tra i più ricchi e antichi del mondo. Al suo
+              vertice regnano Ra, il sole creatore, e Osiride, il signore
+              dell'oltretomba. Accanto a loro, una moltitudine di divinità
+              cosmiche, funerarie, artigianali e teriomorfe che hanno
+              attraversato oltre tremila anni di storia.
+            </p>
+          </div>
+          <div class="pantheon-grid" id="egizi-pantheon"></div>
+        </div>
+
+        <!-- EROI -->
+        <div class="sec-block" id="esec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Gli eroi e i saggi</p>
+            <h2 class="sec-title">Tra divino e umano</h2>
+            <p class="sec-intro">
+              L'Egitto non ha prodotto una grande epopea eroica come Mesopotamia
+              o Grecia — ma ha elaborato figure archetipiche straordinarie: il
+              dio-bambino perseguitato che vince l'usurpatore, e l'uomo saggio
+              elevato al rango di divinità per i suoi meriti.
+            </p>
+          </div>
+          <div class="hero-cards" id="egizi-heroes"></div>
+        </div>
+
+        <!-- MITI -->
+        <div class="sec-block" id="esec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi miti</p>
+            <h2 class="sec-title">Le storie sacre del Nilo</h2>
+            <p class="sec-intro">
+              Dai Testi delle Piramidi al Libro dei Morti, dai papiri del Nuovo
+              Regno alle pareti dei templi tolemaici, la mitologia egizia ci
+              consegna alcune delle narrazioni più influenti della storia umana
+              — molte delle quali hanno lasciato tracce profonde nella cultura
+              occidentale.
+            </p>
+          </div>
+          <div class="myths-list" id="egizi-myths"></div>
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#home" class="cta-btn">&larr; Tutte le mitologie</a>
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="page-norrena" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Norrena — in arrivo
+      </div>
+    </div>
+    <div id="page-giapponese" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Giapponese — in arrivo
+      </div>
+    </div>
+    <div id="page-indu" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Indù — in arrivo
+      </div>
+    </div>
+    <div id="page-maya" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Maya & Azteca — in arrivo
+      </div>
+    </div>
+
+    <!-- ══ PAGE: CELTICA (HUB — selezione delle 4 tradizioni) ══ -->
+    <div id="page-celtica" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-celtic-hub"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#7ab58a"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#home" class="back-btn">&larr; Mythologia</a>
+        </div>
+        <div class="mph-content">
+          <h1 class="mph-title gold-grad">Mitologia<br />Celtica</h1>
+          <p class="mph-sub">
+            I Tuatha Dé Danann, l'Altro Mondo e le nebbie sacre — quattro
+            tradizioni di un unico popolo
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Irlanda</span>
+            <span class="chip">Galles</span>
+            <span class="chip">Gallia</span>
+            <span class="chip">Scozia</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="sec-block active">
+          <div class="sec-head">
+            <p class="sec-ey">Le quattro tradizioni celtiche</p>
+            <h2 class="sec-title">Scegli il tuo percorso</h2>
+            <p class="sec-intro">
+              La "mitologia celtica" non è mai esistita come sistema unitario: i
+              Celti erano un insieme di popoli imparentati per lingua e cultura,
+              ma con pantheon distinti e fonti letterarie separate. Mythologia
+              conserva questa pluralità esplorando le quattro grandi tradizioni
+              in cui ci è giunta.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Griglia delle 4 tradizioni: usa .myth-grid come la home -->
+      <div class="myth-grid" id="celtic-hub-grid"></div>
+
+      <div class="content">
+        <div class="sec-block active">
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#home" class="cta-btn">&larr; Tutte le mitologie</a>
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PAGE: CELTICA — IRLANDESE ══ -->
+    <div id="page-celtica-irlandese" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-celtic-irish"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#5ab57a"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#celtica" class="back-btn">&larr; Celtica</a>
+        </div>
+        <div class="mph-content">
+          <h1 class="mph-title gold-grad">Tradizione<br />Irlandese</h1>
+          <p class="mph-sub">
+            La più ricca tradizione celtica: Tuatha Dé Danann, Cú Chulainn,
+            Fionn e i Fianna, il mondo del Sidhe
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Ciclo Mitologico</span>
+            <span class="chip">Ciclo dell'Ulster</span>
+            <span class="chip">Ciclo Fiann</span>
+            <span class="chip">Ciclo dei Re</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="section-nav">
+        <button class="snav-btn active" onclick="showIrishSec('cosmo', this)">
+          Cosmogonia
+        </button>
+        <button class="snav-btn" onclick="showIrishSec('dei', this)">
+          Pantheon
+        </button>
+        <button class="snav-btn" onclick="showIrishSec('eroi', this)">
+          Eroi
+        </button>
+        <button class="snav-btn" onclick="showIrishSec('miti', this)">
+          Miti principali
+        </button>
+      </nav>
+
+      <div class="content">
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="irsec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Il mondo irlandese</p>
+            <h2 class="sec-title">Le cinque invasioni d'Irlanda</h2>
+            <p class="sec-intro">
+              Il Lebor Gabála Érenn racconta le cinque conquiste mitiche
+              dell'isola: Cesair prima del diluvio, poi Partholón, Nemed, i Fir
+              Bolg, i Tuatha Dé Danann, infine i Milesi. Dopo la sconfitta per
+              mano dei Milesi, i Tuatha Dé non scompaiono: si ritirano nei
+              sídhe, diventando il Popolo delle Fate.
+            </p>
+          </div>
+          <div id="irish-cosmo-steps">
+            <div class="cosmo-step">
+              <div class="cosmo-num">I</div>
+              <div>
+                <div class="cosmo-label">Cesair e il diluvio</div>
+                <div class="cosmo-text">
+                  La prima invasione è quella di Cesair, donna nipote di Noè,
+                  che arriva con cinquanta donne e pochi uomini appena prima del
+                  diluvio. Tutti periscono tranne Fintán, che sopravvive
+                  trasformandosi in salmone, aquila, falco — testimone perenne
+                  dell'Irlanda.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">II</div>
+              <div>
+                <div class="cosmo-label">
+                  Partholón e Nemed — le prime civiltà
+                </div>
+                <div class="cosmo-text">
+                  Dopo il diluvio arriva Partholón e istituisce agricoltura e
+                  allevamento; muore con il suo popolo per una peste. Nemed
+                  combatte i Fomori, demoni dell'oceano, e muore anche lui.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">III</div>
+              <div>
+                <div class="cosmo-label">I Fir Bolg e la prima Mag Tuired</div>
+                <div class="cosmo-text">
+                  I Fir Bolg, discendenti dispersi di Nemed, tornano dalla
+                  Grecia e dividono l'Irlanda in cinque province. Vengono
+                  sconfitti nella Prima Battaglia di Mag Tuired dai Tuatha Dé
+                  Danann, ma il re Nuada perde la mano destra e deve abdicare.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">IV</div>
+              <div>
+                <div class="cosmo-label">
+                  La Seconda Battaglia e la vittoria di Lugh
+                </div>
+                <div class="cosmo-text">
+                  Sotto la tirannia del semi-fomoriano Bres, i Tuatha Dé si
+                  ribellano. Nuada guarito dal braccio d'argento di Dian Cécht
+                  torna al trono; arriva il giovane Lugh dio solare. Nella
+                  Seconda Battaglia di Mag Tuired Lugh uccide il nonno Balor
+                  dall'occhio mostruoso e inaugura l'ordine cosmico celtico.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">V</div>
+              <div>
+                <div class="cosmo-label">
+                  L'arrivo dei Milesi e il ritiro degli dèi
+                </div>
+                <div class="cosmo-text">
+                  I figli di Míl — antenati degli irlandesi storici — arrivano
+                  dall'Iberia guidati dal poeta Amergin. Sconfiggono i Tuatha
+                  Dé. L'accordo cosmogonico: i mortali avranno il mondo
+                  visibile, gli dèi il mondo invisibile dei sídhe. Così gli dèi
+                  diventano le "fate" del folklore.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANTHEON -->
+        <div class="sec-block" id="irsec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">I Tuatha Dé Danann</p>
+            <h2 class="sec-title">Il popolo della dea Danu</h2>
+            <p class="sec-intro">
+              Il pantheon irlandese è un'aristocrazia divina discendente dalla
+              Grande Madre Danu. Al vertice il Dagda padre degli dèi, la
+              triplice Morrígan della guerra, Lugh dio solare di ogni arte,
+              Brigid del fuoco sacro, Manannán del mare e dell'Altro Mondo.
+            </p>
+          </div>
+          <div class="pantheon-grid" id="irish-pantheon"></div>
+        </div>
+
+        <!-- EROI -->
+        <div class="sec-block" id="irsec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Gli eroi leggendari</p>
+            <h2 class="sec-title">Mortali toccati dagli dèi</h2>
+            <p class="sec-intro">
+              L'epica irlandese ha prodotto i più grandi eroi della letteratura
+              celtica: Cú Chulainn, l'Achille dell'Ulster; Fionn mac Cumhaill,
+              capo dei Fianna; Diarmuid, l'amante fatato; Conchobar, il re
+              tragico; Oisín, il bardo rapito a Tír na nÓg.
+            </p>
+          </div>
+          <div class="hero-cards" id="irish-heroes"></div>
+        </div>
+
+        <!-- MITI -->
+        <div class="sec-block" id="irsec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi miti</p>
+            <h2 class="sec-title">Le storie fondative</h2>
+            <p class="sec-intro">
+              Il corpo mitologico irlandese si organizza in quattro cicli:
+              Mitologico, dell'Ulster, Fiann, dei Re. Quattro modi di raccontare
+              l'origine e il senso del popolo gaelico.
+            </p>
+          </div>
+          <div class="myths-list" id="irish-myths"></div>
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#celtica" class="cta-btn"
+                >&larr; Altre tradizioni celtiche</a
+              >
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PLACEHOLDER: Altre 3 sotto-tradizioni celtiche (da sviluppare) ══ -->
+    <!-- ══ PAGE: CELTICA — GALLESE (BRITTONICA) ══ -->
+    <div id="page-celtica-gallese" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-celtic-welsh"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#a87ac8"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#celtica" class="back-btn">&larr; Celtica</a>
+        </div>
+        <div class="mph-content">
+          <h1 class="mph-title gold-grad">Tradizione<br />Gallese</h1>
+          <p class="mph-sub">
+            Il Mabinogion e i suoi Quattro Rami — Rhiannon, Gwydion, Bran il
+            Benedetto, e l'Artù arcaico prima della cortesia normanna
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Mabinogion</span>
+            <span class="chip">Quattro Rami</span>
+            <span class="chip">Ciclo brittonico</span>
+            <span class="chip">Annwn</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="section-nav">
+        <button class="snav-btn active" onclick="showWelshSec('cosmo', this)">
+          Cosmogonia
+        </button>
+        <button class="snav-btn" onclick="showWelshSec('dei', this)">
+          Pantheon
+        </button>
+        <button class="snav-btn" onclick="showWelshSec('eroi', this)">
+          Eroi
+        </button>
+        <button class="snav-btn" onclick="showWelshSec('miti', this)">
+          Miti principali
+        </button>
+      </nav>
+
+      <div class="content">
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="wlsec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Il mondo brittonico</p>
+            <h2 class="sec-title">Dall'Annwn alla Corte di Artù</h2>
+            <p class="sec-intro">
+              La tradizione gallese non ha una cosmogonia narrativa esplicita
+              come quella irlandese (non c'è un Lebor Gabála). Ciò che possiede,
+              tuttavia, è qualcosa di altrettanto potente: la mappa mitica dei
+              Quattro Rami del Mabinogion, una geografia sacra tra Dyfed e
+              Gwynedd, e l'intreccio con la tradizione arturiana arcaica —
+              quella dell'Artù cacciatore di mostri, anteriore al ciclo cortese
+              europeo.
+            </p>
+          </div>
+          <div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">I</div>
+              <div>
+                <div class="cosmo-label">
+                  I Quattro Rami — il canone mitologico
+                </div>
+                <div class="cosmo-text">
+                  Il cuore della mitologia gallese sono i Quattro Rami del
+                  Mabinogi: Pwyll, Branwen, Manawydan, Math. Quattro racconti
+                  intrecciati, con personaggi ricorrenti, che insieme formano
+                  una sorta di ciclo mitico centrale. Composti probabilmente tra
+                  XI e XII secolo sulla base di materiale orale molto più
+                  antico, sono conservati nel Libro Bianco di Rhydderch (XIV
+                  sec.) e nel Libro Rosso di Hergest (XIV-XV sec.).
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">II</div>
+              <div>
+                <div class="cosmo-label">Don e Llŷr — due dinastie divine</div>
+                <div class="cosmo-text">
+                  Il pantheon gallese si articola attorno a due grandi stirpi: i
+                  figli di Don (Gwydion, Arianrhod, Gofannon) in Gwynedd, e i
+                  figli di Llŷr (Bran, Branwen, Manawydan) di ascendenza
+                  oceanica. Le due dinastie si intrecciano con le famiglie di
+                  Dyfed (Pwyll, Rhiannon, Pryderi) creando la trama genealogica
+                  del Mabinogion.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">III</div>
+              <div>
+                <div class="cosmo-label">L'Annwn — l'Altro Mondo gallese</div>
+                <div class="cosmo-text">
+                  L'Annwn è la dimensione parallela al mondo dei vivi: regno di
+                  Arawn, pieno di meraviglie, raggiungibile attraverso soglie
+                  magiche (boschi, tumuli, nebbie marine). Non è un "inferno" ma
+                  un mondo alternativo con propria fauna (i cŵn Annwn, cani
+                  bianchi dalle orecchie rosse), propria politica (il re Arawn,
+                  il rivale Hafgan), e propri oggetti sacri (il calderone della
+                  rinascita).
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">IV</div>
+              <div>
+                <div class="cosmo-label">
+                  Dal mito arcaico al ciclo arturiano
+                </div>
+                <div class="cosmo-text">
+                  La tradizione gallese è all'origine del ciclo arturiano
+                  europeo. L'Artù di Culhwch ac Olwen (fine XI sec.) è figura
+                  arcaica, cacciatore di mostri e giganti, prima della
+                  trasformazione cortese operata da Geoffrey di Monmouth (1136)
+                  e Chrétien de Troyes (1170s). Anche il Graal ha probabile
+                  origine celtica: il calderone di Bran, il calderone del
+                  Preiddeu Annwn e quello di Cerridwen sono tutti "proto-Graal"
+                  mitici.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">V</div>
+              <div>
+                <div class="cosmo-label">
+                  La riscoperta ottocentesca e il revival gallese
+                </div>
+                <div class="cosmo-text">
+                  Charlotte Guest tradusse il Mabinogion tra il 1838 e il 1845,
+                  dandogli il nome con cui oggi lo conosciamo e inaugurandone la
+                  ricezione moderna. Dal suo lavoro dipendono la rinascita
+                  culturale gallese, la rifondazione dell'Eisteddfod Nazionale,
+                  e — attraverso autori come Tolkien, Alan Garner, Lloyd
+                  Alexander, Susan Cooper — gran parte del fantasy anglofono del
+                  XX secolo.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANTHEON -->
+        <div class="sec-block" id="wlsec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">Il pantheon gallese</p>
+            <h2 class="sec-title">Le stirpi di Don e di Llŷr</h2>
+            <p class="sec-intro">
+              Sette figure divine centrali animano il pantheon brittonico: la
+              matrona Don; Rhiannon, la dama sul cavallo bianco; Arawn, re
+              dell'Annwn; il mago Gwydion; il giovane Lleu luminoso; il gigante
+              Bran il Benedetto; la tragica Blodeuwedd, donna-fiore trasformata
+              in gufo.
+            </p>
+          </div>
+          <div class="pantheon-grid" id="welsh-pantheon"></div>
+        </div>
+
+        <!-- EROI -->
+        <div class="sec-block" id="wlsec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Gli eroi del Mabinogion</p>
+            <h2 class="sec-title">Principi, maghi, cacciatori</h2>
+            <p class="sec-intro">
+              Cinque eroi articolano il canone narrativo: Pwyll di Dyfed (primo
+              marito di Rhiannon), Manawydan fab Llŷr (il saggio artigiano),
+              Math fab Mathonwy (il re-mago del Gwynedd), Culhwch (protagonista
+              del primo racconto arturiano), e l'Artù arcaico, diverso dal re
+              cortese europeo.
+            </p>
+          </div>
+          <div class="hero-cards" id="welsh-heroes"></div>
+        </div>
+
+        <!-- MITI -->
+        <div class="sec-block" id="wlsec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi testi</p>
+            <h2 class="sec-title">Corpus, racconti, poemi bardici</h2>
+            <p class="sec-intro">
+              Tre pilastri del patrimonio narrativo gallese: il Mabinogion nel
+              suo insieme come corpus nazionale; Culhwch ac Olwen come prima
+              Quest arturiana (fine XI sec.); Preiddeu Annwn, il raid di Artù
+              all'Altro Mondo per conquistare il calderone-proto-Graal.
+            </p>
+          </div>
+          <div class="myths-list" id="welsh-myths"></div>
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#celtica" class="cta-btn"
+                >&larr; Altre tradizioni celtiche</a
+              >
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ══ PAGE: CELTICA — GALLESE (BRITTONICA) ══ -->
+    <!-- ══ PAGE: CELTICA — GALLICA CONTINENTALE ══ -->
+    <div id="page-celtica-gallica" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-celtic-gallic"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#a8b580"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#celtica" class="back-btn">&larr; Celtica</a>
+        </div>
+        <div class="mph-content">
+          <h1 class="mph-title gold-grad">Tradizione<br />Gallica</h1>
+          <p class="mph-sub">
+            La religione celtica del continente — Cesare, Lucano, il calderone di Gundestrup, i druidi e il sacrificio rituale
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Gallia</span>
+            <span class="chip">Iberia</span>
+            <span class="chip">Germania celtica</span>
+            <span class="chip">Norico</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="section-nav">
+        <button class="snav-btn active" onclick="showGallicSec('cosmo', this)">Cosmogonia</button>
+        <button class="snav-btn"        onclick="showGallicSec('dei',   this)">Pantheon</button>
+        <button class="snav-btn"        onclick="showGallicSec('eroi',  this)">Eroi</button>
+        <button class="snav-btn"        onclick="showGallicSec('miti',  this)">Miti principali</button>
+      </nav>
+
+      <div class="content">
+
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="glsec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Il mondo gallico continentale</p>
+            <h2 class="sec-title">Una religione senza testi propri</h2>
+            <p class="sec-intro">
+              La tradizione gallica continentale presenta una sfida unica allo storico della religione: i Galli non scrivevano. O meglio, usavano l'alfabeto greco e poi latino per fini commerciali e amministrativi, ma per esplicita scelta dottrinale non mettevano per iscritto la loro sapienza religiosa. Tutto ciò che sappiamo della religione gallica viene da fonti esterne (Cesare, Lucano, Plinio, Strabone, Diodoro) o dall'archeologia.
+            </p>
+          </div>
+          <div>
+            <div class="cosmo-step"><div class="cosmo-num">I</div><div><div class="cosmo-label">Origine dal dio della notte</div><div class="cosmo-text">Cesare (De Bello Gallico VI, 18) riporta la dottrina cosmogonica gallica trasmessa dai druidi: "Tutti i Galli proclamano di essere nati da Dispater". Il dio-notte è origine primordiale: non il cielo diurno ma il buio ancestrale è la matrice di tutto. Per questo — aggiunge Cesare — i Galli contano il tempo non in giorni ma in notti. Il mondo emerge dalla notte di Dispater; il giorno è episodio della notte.</div></div></div>
+            <div class="cosmo-step"><div class="cosmo-num">II</div><div><div class="cosmo-label">La triade sacrificale: Taranis, Teutates, Esus</div><div class="cosmo-text">Lucano nella Pharsalia I, 444-446 enumera le tre grandi divinità galliche che richiedono sangue: Taranis (tuono, arde i sacrificati in una gabbia di vimini), Teutates (tribù, annega le vittime in un tino rituale), Esus (albero sacro, impicca i sacrificati ai rami). La triade suggerisce l'articolazione delle tre funzioni indoeuropee — cielo (Taranis), guerra/tribù (Teutates), ctonio/sacrificio (Esus) — al modo gallico.</div></div></div>
+            <div class="cosmo-step"><div class="cosmo-num">III</div><div><div class="cosmo-label">I druidi come classe intermediaria</div><div class="cosmo-text">Tra gli dèi e gli uomini stavano i druidi: non semplici sacerdoti ma classe intellettuale integrale. Sacerdoti, giudici, medici, astrologi, insegnanti, custodi della tradizione orale. Si formavano per vent'anni memorizzando versi sacri; non scrivevano nulla. Godevano di immunità legale e di esenzione dal servizio militare. La loro assemblea annuale si teneva nella terra dei Carnuti, centro sacro della Gallia.</div></div></div>
+            <div class="cosmo-step"><div class="cosmo-num">IV</div><div><div class="cosmo-label">L'immortalità dell'anima e la reincarnazione</div><div class="cosmo-text">Cesare: "[I druidi] vogliono persuadere che le anime non periscono ma trapassano dopo la morte da un corpo all'altro". Diodoro Siculo identifica questa dottrina con il pitagorismo. La reincarnazione druidica non era escatologia marginale ma cuore del sistema: spiegava il coraggio guerriero gallico, giustificava le offerte sacrificali, strutturava una concezione ciclica del tempo opposta alla linearità romana.</div></div></div>
+            <div class="cosmo-step"><div class="cosmo-num">V</div><div><div class="cosmo-label">La fine: Cesare, la romanizzazione, il cristianesimo</div><div class="cosmo-text">Tra il 58 e il 50 a.C. Cesare conquista la Gallia. La religione gallica sopravvive qualche generazione in forma sincretizzata (dediche "Deo Mercurio Lugubo", "Apollo Belenus", colonne dei Giganti), poi viene progressivamente repressa (Augusto, Tiberio, Claudio proibiscono i druidi) o assorbita dal cristianesimo (V-VII sec.). La Gallia pagana scompare come struttura istituzionale, sopravvivendo solo in toponimi, folklore rurale, e nell'immaginario identitario europeo.</div></div></div>
+          </div>
+        </div>
+
+        <!-- PANTHEON -->
+        <div class="sec-block" id="glsec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">Il pantheon continentale</p>
+            <h2 class="sec-title">Gli dèi di Cesare, Lucano e Gundestrup</h2>
+            <p class="sec-intro">Otto divinità principali strutturano il pantheon gallico continentale, documentate attraverso iscrizioni votive, iconografia, e le rare menzioni delle fonti latine. Sono funzioni piuttosto che personalità: il dio-tuono (Taranis), il dio-tribù (Teutates), il dio-albero (Esus), il dio-cornuto (Cernunnos), il dio-artigiano (Lugus), la dea-cavallo (Epona), il dio-sole (Belenus), il dio-martello (Sucellus).</p>
+          </div>
+          <div class="pantheon-grid" id="gallic-pantheon"></div>
+        </div>
+
+        <!-- EROI -->
+        <div class="sec-block" id="glsec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Figure storico-mitiche</p>
+            <h2 class="sec-title">Eroi e istituzioni sacre</h2>
+            <p class="sec-intro">La Gallia continentale non ha eroi del tipo irlandese o gallese, perché la tradizione orale che avrebbe potuto conservarli fu interrotta dalla conquista romana. Ma ha figure storico-mitiche che hanno attraversato i secoli — Vercingetorige, il re degli Arverni che unì la Gallia contro Cesare, e i druidi come collettivo sacerdotale-intellettuale.</p>
+          </div>
+          <div class="hero-cards" id="gallic-heroes"></div>
+        </div>
+
+        <!-- MITI -->
+        <div class="sec-block" id="glsec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi simboli</p>
+            <h2 class="sec-title">Oggetti e luoghi sacri</h2>
+            <p class="sec-intro">Senza testi propri, la tradizione gallica continentale si esprime attraverso oggetti e luoghi: il calderone di Gundestrup come compendio iconografico della religione celtica, Alesia come luogo-simbolo della resistenza e della sconfitta finale.</p>
+          </div>
+          <div class="myths-list" id="gallic-myths"></div>
+          <hr class="divider-line">
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#celtica" class="cta-btn">&larr; Altre tradizioni celtiche</a>
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <!-- ══ PAGE: CELTICA — GAELICA SCOZZESE E INSULARE ══ -->
+    <div id="page-celtica-insulare" class="page-view">
+      <div class="myth-page-hero">
+        <div class="mph-bg mph-bg-celtic-insular"></div>
+        <div class="mph-stars"></div>
+        <svg class="mph-zz" viewBox="0 0 900 120" preserveAspectRatio="none">
+          <path
+            d="M0 120 L0 70 L40 35 L80 70 L120 35 L160 70 L200 35 L240 70 L280 35 L320 70 L360 35 L400 70 L440 35 L480 70 L520 35 L560 70 L600 35 L640 70 L680 35 L720 70 L760 35 L800 70 L840 35 L900 70 L900 120 Z"
+            fill="#5a8ab0"
+          />
+        </svg>
+        <div class="mph-nav">
+          <a href="#celtica" class="back-btn">&larr; Celtica</a>
+        </div>
+        <div class="mph-content">
+          <h1 class="mph-title gold-grad">Gaelica Scozzese<br />e Insulare</h1>
+          <p class="mph-sub">
+            La Cailleach dell'inverno, Scáthach la maestra guerriera, selkie e
+            kelpie delle acque, il Tynwald mannese — il folklore gaelico più
+            longevo d'Europa
+          </p>
+          <div class="mph-chips">
+            <span class="chip">Highlands</span>
+            <span class="chip">Ebridi</span>
+            <span class="chip">Isola di Man</span>
+            <span class="chip">Orcadi</span>
+          </div>
+        </div>
+      </div>
+
+      <nav class="section-nav">
+        <button
+          class="snav-btn active"
+          onclick="showScottishSec('cosmo', this)"
+        >
+          Cosmogonia
+        </button>
+        <button class="snav-btn" onclick="showScottishSec('dei', this)">
+          Pantheon
+        </button>
+        <button class="snav-btn" onclick="showScottishSec('eroi', this)">
+          Eroi
+        </button>
+        <button class="snav-btn" onclick="showScottishSec('miti', this)">
+          Miti principali
+        </button>
+      </nav>
+
+      <div class="content">
+        <!-- COSMOGONIA -->
+        <div class="sec-block active" id="scsec-cosmo">
+          <div class="sec-head">
+            <p class="sec-ey">Il mondo gaelico insulare</p>
+            <h2 class="sec-title">Un paesaggio di acque, nebbie e memoria</h2>
+            <p class="sec-intro">
+              La tradizione gaelica scozzese e insulare non ha una vera
+              cosmogonia narrativa come quella irlandese: non c'è un Lebor
+              Gabála, non c'è una sequenza di cinque invasioni. Ciò che c'è è
+              qualcosa di diverso e forse più profondo — una geografia sacra, un
+              calendario ritualizzato, un folklore stratificato che ha
+              conservato elementi pre-celtici, celtici, norreni e cristiani in
+              un palinsesto continuo.
+            </p>
+          </div>
+          <div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">I</div>
+              <div>
+                <div class="cosmo-label">Le Highlands come corpo della dea</div>
+                <div class="cosmo-text">
+                  Il paesaggio scozzese delle Highlands è letteralmente "corpo
+                  della Cailleach" nella tradizione popolare: le catene montuose
+                  sono le pietre cadute dal suo grembiule, i laghi profondi sono
+                  i suoi occhi, i cervi rossi sono il suo bestiame. Questa
+                  concezione "teomorfica" del paesaggio — il territorio come
+                  corpo divino — è più arcaica delle mitologie antropomorfe e
+                  rimanda alla religione pre-indoeuropea.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">II</div>
+              <div>
+                <div class="cosmo-label">Le Ebridi come arcipelago sacro</div>
+                <div class="cosmo-text">
+                  Le Ebridi — quasi cinquecento isole sparpagliate
+                  nell'Atlantico a ovest della Scozia — sono l'"arcipelago
+                  sacro" del mondo gaelico: ogni isola ha i suoi santi, le sue
+                  leggende di selkie, le sue tradizioni poetiche. Iona, in
+                  particolare, è il centro spirituale gaelico sin dalla
+                  fondazione del monastero di San Colombano (563 d.C.), ma le
+                  tradizioni pre-cristiane delle isole sono sopravvissute sotto
+                  la coperta cristiana fino al XX secolo, preservate dal Carmina
+                  Gadelica.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">III</div>
+              <div>
+                <div class="cosmo-label">
+                  L'Isola di Man — Ellan Vannin, Terra di Manannán
+                </div>
+                <div class="cosmo-text">
+                  L'Isola di Man è la "terza via" del mondo gaelico insulare,
+                  distinta sia dall'Irlanda sia dalla Scozia. Il suo nome stesso
+                  — Ellan Vannin, "Isola di Manannán" — la colloca sotto la
+                  protezione del dio del mare. Conserva una lingua propria (il
+                  mannese), istituzioni millenarie (il Tynwald), e una
+                  continuità rituale tra paganesimo e cristianesimo unica in
+                  Europa.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">IV</div>
+              <div>
+                <div class="cosmo-label">
+                  Il ciclo stagionale — Samhain e Beltane
+                </div>
+                <div class="cosmo-text">
+                  Il calendario gaelico è strutturato attorno a due cardini:
+                  Samhain (1° novembre, inizio dell'inverno) e Beltane (1°
+                  maggio, inizio dell'estate). Tra questi due poli si svolge la
+                  dialettica Cailleach/Brigid: l'inverno è il regno della
+                  Vecchia, l'estate è il regno della Giovane, e il passaggio tra
+                  le due è ritualizzato. Imbolc (1° febbraio) e Lughnasadh (1°
+                  agosto) sono i due sub-cardini che articolano ulteriormente il
+                  ciclo. Questo calendario, oggi residuale, è sopravvissuto più
+                  a lungo in Scozia gaelica che altrove.
+                </div>
+              </div>
+            </div>
+            <div class="cosmo-step">
+              <div class="cosmo-num">V</div>
+              <div>
+                <div class="cosmo-label">
+                  Il cristianesimo gaelico come palinsesto
+                </div>
+                <div class="cosmo-text">
+                  A differenza del cristianesimo continentale — che cercò di
+                  cancellare il paganesimo — il cristianesimo gaelico insulare
+                  (da San Colombano in poi) ha tendenzialmente assorbito e
+                  sovrapposto. Il Carmina Gadelica documenta centinaia di
+                  preghiere che mescolano Cristo, Maria e Brigid in formule
+                  inseparabili. Il Tynwald mannese celebra rituali cristiani
+                  attorno a elementi pre-cristiani attribuiti a Manannán. È un
+                  cristianesimo "poroso", unico in Europa, che ha conservato nel
+                  proprio corpo la memoria del sostrato religioso precedente.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- PANTHEON -->
+        <div class="sec-block" id="scsec-dei">
+          <div class="sec-head">
+            <p class="sec-ey">Il popolo soprannaturale</p>
+            <h2 class="sec-title">Divinità, fate e creature delle acque</h2>
+            <p class="sec-intro">
+              La "pantheon" scozzese e insulare è meno strutturata di quella
+              irlandese — non c'è un ordine chiaro come quello dei Tuatha Dé
+              Danann. Ma le sue figure sono potenti: la Cailleach primordiale,
+              Scáthach maestra d'armi, Manannán mannese re-mago dell'isola, i
+              Selkie tragici e i Kelpie demoniaci del folklore acquatico.
+            </p>
+          </div>
+          <div class="pantheon-grid" id="scot-pantheon"></div>
+        </div>
+
+        <!-- EROI -->
+        <div class="sec-block" id="scsec-eroi">
+          <div class="sec-head">
+            <p class="sec-ey">Gli eroi delle due sponde</p>
+            <h2 class="sec-title">Figure tra Irlanda e Alba</h2>
+            <p class="sec-intro">
+              Il mondo gaelico non conosce confini netti tra Irlanda e Scozia: i
+              suoi eroi attraversano il mare liberamente. Suibhne Geilt vola tra
+              le due terre nella sua follia profetica; Deirdre vive in Alba i
+              suoi sedici anni di felicità prima della tragedia finale.
+            </p>
+          </div>
+          <div class="hero-cards" id="scot-heroes"></div>
+        </div>
+
+        <!-- MITI -->
+        <div class="sec-block" id="scsec-miti">
+          <div class="sec-head">
+            <p class="sec-ey">I grandi corpus</p>
+            <h2 class="sec-title">Testi, rituali, tradizioni sopravvissute</h2>
+            <p class="sec-intro">
+              La tradizione insulare non ha una "grande epopea" come la Táin, ma
+              possiede qualcosa di forse più prezioso: tradizioni vive fino al
+              XX-XXI secolo. Il Carmina Gadelica di Alexander Carmichael, la
+              Seconda Vista (An Dà Shealladh) delle Highlands, e il Tynwald
+              millenario dell'Isola di Man sono tre modi diversi in cui il
+              passato celtico è rimasto presente.
+            </p>
+          </div>
+          <div class="myths-list" id="scot-myths"></div>
+          <hr class="divider-line" />
+          <div class="page-cta">
+            <p class="cta-label">Continua l'esplorazione</p>
+            <div class="cta-btns">
+              <a href="#celtica" class="cta-btn"
+                >&larr; Altre tradizioni celtiche</a
+              >
+              <a href="#atlante" class="cta-btn">Atlante interattivo &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="page-africana" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologie Africane — in arrivo
+      </div>
+    </div>
+    <div id="page-cinese" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Cinese — in arrivo
+      </div>
+    </div>
+    <div id="page-slava" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Slava — in arrivo
+      </div>
+    </div>
+    <div id="page-araba" class="page-view">
+      <div
+        style="
+          padding: 8rem 2rem;
+          text-align: center;
+          font-family: &quot;Cinzel Decorative&quot;, serif;
+          color: #c8963e;
+          font-size: 1.2rem;
+        "
+      >
+        Mitologia Araba — in arrivo
+      </div>
+    </div>
+
+    <!-- ══ SCRIPTS ══ -->
+
+    <!-- Librerie esterne -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/topojson-client@3/dist/topojson-client.min.js"></script>
+
+    <!-- Dati -->
+    <script src="data/atlas.js"></script>
+    <script src="data/mesopotamia.js"></script>
+    <script src="data/egitto.js"></script>
+
+    <!-- Renderer condiviso + logiche pagina (devono girare PRIMA del router
      così le entità sono registrate in MYTH_ENTITIES in tempo per
      gestire deep-link del tipo #mesopotamia/deity/anu o #egitto/deity/horus) -->
-<script src="js/entity.js"></script>
-<script src="js/atlas.js"></script>
-<script src="js/mesopotamia.js"></script>
-<script src="js/egitto.js"></script>
+    <script src="js/entity.js"></script>
+    <script src="js/atlas.js"></script>
+    <script src="js/mesopotamia.js"></script>
+    <script src="js/egitto.js"></script>
+    <!-- Mitologia Celtica — Irlandese -->
+    <script src="data/celtica-irlandese.js"></script>
+    <script src="data/celtica-insulare.js"></script>
+    <script src="data/celtica-gallica.js"></script>
+    <script src="data/celtica-gallese.js"></script>
 
-<!-- Router per ultimo: si aggancia a DOMContentLoaded e attiva la route -->
-<script src="js/router.js"></script>
-</body>
+    <script src="js/celtica-irlandese.js"></script>
+    <script src="js/celtica-insulare.js"></script>
+    <script src="js/celtica-gallica.js"></script>
+    <script src="js/celtica-gallese.js"></script>
+
+    <script src="js/celtica.js"></script>
+
+    <!-- Router per ultimo: si aggancia a DOMContentLoaded e attiva la route -->
+    <script src="js/router.js"></script>
+  </body>
 </html>
