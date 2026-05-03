@@ -9,35 +9,46 @@
 
   const bucket = { deity: {}, hero: {}, myth: {} };
 
-  if (typeof GALLIC_DEITIES !== 'undefined') {
-    GALLIC_DEITIES.forEach(d => { bucket.deity[d.id] = d; });
+  if (typeof GALLIC_DEITIES !== "undefined") {
+    GALLIC_DEITIES.forEach((d) => {
+      bucket.deity[d.id] = d;
+    });
   }
-  if (typeof GALLIC_HEROES !== 'undefined') {
-    GALLIC_HEROES.forEach(h => { bucket.hero[h.id] = h; });
+  if (typeof GALLIC_HEROES !== "undefined") {
+    GALLIC_HEROES.forEach((h) => {
+      bucket.hero[h.id] = h;
+    });
   }
-  if (typeof GALLIC_MYTHS !== 'undefined') {
-    GALLIC_MYTHS.forEach(m => { bucket.myth[m.id] = m; });
+  if (typeof GALLIC_MYTHS !== "undefined") {
+    GALLIC_MYTHS.forEach((m) => {
+      bucket.myth[m.id] = m;
+    });
   }
 
-  window.MYTH_ENTITIES['celtica-gallica'] = bucket;
+  window.MYTH_ENTITIES["celtica-gallica"] = bucket;
 })();
 
 /* ── Init pagina ───────────────────────────────────────────────────── */
-window['initPage_celtica-gallica'] = function() {
+window["initPage_celtica-gallica"] = function () {
   _buildGallicPantheon();
   _buildGallicHeroes();
   _buildGallicMyths();
-  showGallicSec('cosmo', document.querySelector('#page-celtica-gallica .snav-btn'));
+  showGallicSec(
+    "cosmo",
+    document.querySelector("#page-celtica-gallica .snav-btn"),
+  );
 };
 
 /* ── Costruzione griglie ───────────────────────────────────────────── */
 function _buildGallicPantheon() {
-  const grid = document.getElementById('gallic-pantheon');
+  const grid = document.getElementById("gallic-pantheon");
   if (!grid || grid.dataset.built) return;
-  grid.dataset.built = '1';
-  if (typeof GALLIC_DEITIES === 'undefined') return;
+  grid.dataset.built = "1";
+  if (typeof GALLIC_DEITIES === "undefined") return;
 
-  grid.innerHTML = GALLIC_DEITIES.map(d => `
+  grid.innerHTML = GALLIC_DEITIES.map((d) => {
+    const bioText = (typeof d.bio === "object" ? d.bio.main : d.bio) || "";
+    return `
     <div class="deity-card" onclick="openGallicEntity('deity','${d.id}')">
       <div class="deity-top">
         <div class="deity-circle"></div>
@@ -46,23 +57,29 @@ function _buildGallicPantheon() {
           <div class="deity-role">${d.role}</div>
         </div>
       </div>
-      <div class="deity-desc">${d.bio.slice(0, 160).replace(/\n/g, ' ')}…</div>
-      <div class="deity-tags">${d.tags.map(t => `<span class="dtag">${t}</span>`).join('')}</div>
+      <div class="deity-desc">
+        ${bioText.slice(0, 160).replace(/\n/g, " ") || '<em style="opacity:.6">Scheda da compilare</em>'}
+        ${bioText.length > 160 ? "…" : ""}
+      </div>
+      <div class="deity-tags">${d.tags.map((t) => `<span class="dtag">${t}</span>`).join("")}</div>
       <div class="deity-cta">Scopri tutto &rarr;</div>
     </div>
-  `).join('');
+  `;
+  }).join("");
 }
 
 function _buildGallicHeroes() {
-  const c = document.getElementById('gallic-heroes');
+  const c = document.getElementById("gallic-heroes");
   if (!c || c.dataset.built) return;
-  c.dataset.built = '1';
-  if (typeof GALLIC_HEROES === 'undefined' || !GALLIC_HEROES.length) {
-    c.innerHTML = '<div style="text-align:center;padding:3rem 1rem;color:#8a8a8a;font-style:italic;">Sezione eroi in arrivo col Lotto 3B</div>';
+  c.dataset.built = "1";
+  if (typeof GALLIC_HEROES === "undefined" || !GALLIC_HEROES.length) {
+    c.innerHTML =
+      '<div style="text-align:center;padding:3rem 1rem;color:#8a8a8a;font-style:italic;">Sezione eroi in arrivo col Lotto 3B</div>';
     return;
   }
 
-  c.innerHTML = GALLIC_HEROES.map(h => `
+  c.innerHTML = GALLIC_HEROES.map(
+    (h) => `
     <div class="hero-card" onclick="openGallicEntity('hero','${h.id}')">
       <div class="hca">
         <div class="hca-circle"></div>
@@ -75,40 +92,46 @@ function _buildGallicHeroes() {
         <div class="hcb-cta">Leggi la storia completa &rarr;</div>
       </div>
     </div>
-  `).join('');
+  `,
+  ).join("");
 }
 
 function _buildGallicMyths() {
-  const c = document.getElementById('gallic-myths');
+  const c = document.getElementById("gallic-myths");
   if (!c || c.dataset.built) return;
-  c.dataset.built = '1';
-  if (typeof GALLIC_MYTHS === 'undefined' || !GALLIC_MYTHS.length) {
-    c.innerHTML = '<div style="text-align:center;padding:3rem 1rem;color:#8a8a8a;font-style:italic;">Sezione miti in arrivo col Lotto 3B</div>';
+  c.dataset.built = "1";
+  if (typeof GALLIC_MYTHS === "undefined" || !GALLIC_MYTHS.length) {
+    c.innerHTML =
+      '<div style="text-align:center;padding:3rem 1rem;color:#8a8a8a;font-style:italic;">Sezione miti in arrivo col Lotto 3B</div>';
     return;
   }
 
-  c.innerHTML = GALLIC_MYTHS.map(m => `
+  c.innerHTML = GALLIC_MYTHS.map(
+    (m) => `
     <div class="myth-entry" onclick="openGallicEntity('myth','${m.id}')">
       <div class="myth-tag">${m.tag}</div>
       <div class="myth-title">${m.title}</div>
       <div class="myth-text">${m.shortDesc}</div>
       <div class="myth-cta">Leggi il mito completo &rarr;</div>
     </div>
-  `).join('');
+  `,
+  ).join("");
 }
 
 /* ── Tabs della sezione ────────────────────────────────────────────── */
 function showGallicSec(id, btn) {
-  document.querySelectorAll('#page-celtica-gallica .sec-block')
-    .forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('#page-celtica-gallica .snav-btn')
-    .forEach(b => b.classList.remove('active'));
-  const el = document.getElementById('glsec-' + id);
-  if (el) el.classList.add('active');
-  if (btn) btn.classList.add('active');
+  document
+    .querySelectorAll("#page-celtica-gallica .sec-block")
+    .forEach((s) => s.classList.remove("active"));
+  document
+    .querySelectorAll("#page-celtica-gallica .snav-btn")
+    .forEach((b) => b.classList.remove("active"));
+  const el = document.getElementById("glsec-" + id);
+  if (el) el.classList.add("active");
+  if (btn) btn.classList.add("active");
 }
 
 /* ── Apertura entità: delega al router ─────────────────────────────── */
 function openGallicEntity(type, id) {
-  window.openEntityRoute('celtica-gallica', type, id);
+  window.openEntityRoute("celtica-gallica", type, id);
 }

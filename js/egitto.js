@@ -8,34 +8,41 @@
 
   const bucket = { deity: {}, hero: {}, myth: {} };
 
-  if (typeof EGIZIO_DEITIES !== 'undefined') {
-    EGIZIO_DEITIES.forEach(d => { bucket.deity[d.id] = d; });
+  if (typeof EGIZIO_DEITIES !== "undefined") {
+    EGIZIO_DEITIES.forEach((d) => {
+      bucket.deity[d.id] = d;
+    });
   }
-  if (typeof EGIZIO_HEROES !== 'undefined') {
-    EGIZIO_HEROES.forEach(h => { bucket.hero[h.id] = h; });
+  if (typeof EGIZIO_HEROES !== "undefined") {
+    EGIZIO_HEROES.forEach((h) => {
+      bucket.hero[h.id] = h;
+    });
   }
-  if (typeof EGIZIO_MYTHS !== 'undefined') {
-    EGIZIO_MYTHS.forEach(m => { bucket.myth[m.id] = m; });
+  if (typeof EGIZIO_MYTHS !== "undefined") {
+    EGIZIO_MYTHS.forEach((m) => {
+      bucket.myth[m.id] = m;
+    });
   }
 
   window.MYTH_ENTITIES.egitto = bucket;
 })();
 
 /* ── Init pagina ───────────────────────────────────────────────────── */
-window.initPage_egitto = function() {
+window.initPage_egitto = function () {
   _buildEgiziPantheon();
   _buildEgiziHeroes();
   _buildEgiziMyths();
-  showEgiziSec('cosmo', document.querySelector('#page-egitto .snav-btn'));
+  showEgiziSec("cosmo", document.querySelector("#page-egitto .snav-btn"));
 };
 
 /* ── Costruzione griglie ───────────────────────────────────────────── */
 function _buildEgiziPantheon() {
-  const grid = document.getElementById('egizi-pantheon');
+  const grid = document.getElementById("egizi-pantheon");
   if (!grid || grid.dataset.built) return;
-  grid.dataset.built = '1';
+  grid.dataset.built = "1";
 
-  grid.innerHTML = EGIZIO_DEITIES.map(d => `
+  grid.innerHTML = EGIZIO_DEITIES.map(
+    (d) => `
     <div class="deity-card" onclick="openEgiziEntity('deity','${d.id}')">
       <div class="deity-top">
         <div class="deity-circle"></div>
@@ -44,19 +51,21 @@ function _buildEgiziPantheon() {
           <div class="deity-role">${d.role}</div>
         </div>
       </div>
-      <div class="deity-desc">${d.bio.slice(0, 160).replace(/\n/g, ' ')}…</div>
-      <div class="deity-tags">${d.tags.map(t => `<span class="dtag">${t}</span>`).join('')}</div>
+      <div class="deity-desc">${(d.bio.main || d.bio).slice(0, 160).replace(/\n/g, " ")}…</div>
+      <div class="deity-tags">${d.tags.map((t) => `<span class="dtag">${t}</span>`).join("")}</div>
       <div class="deity-cta">Scopri tutto &rarr;</div>
     </div>
-  `).join('');
+  `,
+  ).join("");
 }
 
 function _buildEgiziHeroes() {
-  const c = document.getElementById('egizi-heroes');
+  const c = document.getElementById("egizi-heroes");
   if (!c || c.dataset.built) return;
-  c.dataset.built = '1';
+  c.dataset.built = "1";
 
-  c.innerHTML = EGIZIO_HEROES.map(h => `
+  c.innerHTML = EGIZIO_HEROES.map(
+    (h) => `
     <div class="hero-card" onclick="openEgiziEntity('hero','${h.id}')">
       <div class="hca">
         <div class="hca-circle"></div>
@@ -69,36 +78,41 @@ function _buildEgiziHeroes() {
         <div class="hcb-cta">Leggi la storia completa &rarr;</div>
       </div>
     </div>
-  `).join('');
+  `,
+  ).join("");
 }
 
 function _buildEgiziMyths() {
-  const c = document.getElementById('egizi-myths');
+  const c = document.getElementById("egizi-myths");
   if (!c || c.dataset.built) return;
-  c.dataset.built = '1';
+  c.dataset.built = "1";
 
-  c.innerHTML = EGIZIO_MYTHS.map(m => `
+  c.innerHTML = EGIZIO_MYTHS.map(
+    (m) => `
     <div class="myth-entry" onclick="openEgiziEntity('myth','${m.id}')">
       <div class="myth-tag">${m.tag}</div>
       <div class="myth-title">${m.title}</div>
       <div class="myth-text">${m.shortDesc}</div>
       <div class="myth-cta">Leggi il mito completo &rarr;</div>
     </div>
-  `).join('');
+  `,
+  ).join("");
 }
 
 /* ── Tabs della sezione ────────────────────────────────────────────── */
 function showEgiziSec(id, btn) {
-  document.querySelectorAll('#page-egitto .sec-block')
-    .forEach(s => s.classList.remove('active'));
-  document.querySelectorAll('#page-egitto .snav-btn')
-    .forEach(b => b.classList.remove('active'));
-  const el = document.getElementById('esec-' + id);
-  if (el) el.classList.add('active');
-  if (btn) btn.classList.add('active');
+  document
+    .querySelectorAll("#page-egitto .sec-block")
+    .forEach((s) => s.classList.remove("active"));
+  document
+    .querySelectorAll("#page-egitto .snav-btn")
+    .forEach((b) => b.classList.remove("active"));
+  const el = document.getElementById("esec-" + id);
+  if (el) el.classList.add("active");
+  if (btn) btn.classList.add("active");
 }
 
 /* ── Apertura entità: delega al router ─────────────────────────────── */
 function openEgiziEntity(type, id) {
-  window.openEntityRoute('egitto', type, id);
+  window.openEntityRoute("egitto", type, id);
 }
