@@ -414,3 +414,110 @@
     ),
     linear-gradient(160deg, #0a141f 0%, #1a2a3f 35%, #2a3a55 60%, #0e1a2a 100%);
 }
+
+.mph-bg-african {
+  background:
+    radial-gradient(
+      ellipse at 20% 15%,
+      rgba(70, 40, 90, 0.55) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(232, 184, 96, 0.35) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 80% 75%,
+      rgba(180, 80, 40, 0.45) 0%,
+      transparent 55%
+    ),
+    linear-gradient(
+      165deg,
+      #0d0820 0%,
+      #2a1230 18%,
+      #4a1a25 35%,
+      #7a2c1a 52%,
+      #a85028 68%,
+      #d48a3a 82%,
+      #e8b860 92%,
+      #f5d090 100%
+    );
+}
+.mph-bg-african::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(
+      circle at 25% 40%,
+      rgba(245, 200, 130, 0.14) 0%,
+      transparent 40%
+    ),
+    radial-gradient(
+      circle at 75% 20%,
+      rgba(120, 60, 100, 0.18) 0%,
+      transparent 35%
+    );
+  pointer-events: none;
+}
+
+.myth-disclaimer {
+  margin: 2.5rem auto 1.5rem;
+  max-width: 880px;
+  padding: 1.75rem 2rem 1.85rem;
+  background: linear-gradient(
+    180deg,
+    rgba(28, 16, 8, 0.55) 0%,
+    rgba(20, 12, 6, 0.45) 100%
+  );
+  border: 1px solid rgba(212, 138, 58, 0.4);
+  border-left: 3px solid #d4a838;
+  border-radius: 4px;
+  position: relative;
+  box-shadow: 0 2px 18px rgba(0, 0, 0, 0.18);
+}
+
+.myth-disclaimer-ey {
+  font-family: "Cinzel", "Cinzel Decorative", serif;
+  font-size: 0.78rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4a838;
+  margin: 0 0 0.4rem 0;
+  font-weight: 500;
+}
+
+.myth-disclaimer-title {
+  font-family: "Cinzel", "Cinzel Decorative", serif;
+  font-size: 1.32rem;
+  color: #e8c878;
+  margin: 0 0 0.85rem 0;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+}
+
+.myth-disclaimer-text {
+  font-family: "EB Garamond", Georgia, serif;
+  font-size: 1.02rem;
+  line-height: 1.65;
+  color: #d8c8a8;
+  font-style: italic;
+  margin: 0;
+  text-align: justify;
+}
+
+/* Mobile tweaks per il disclaimer */
+@media (max-width: 640px) {
+  .myth-disclaimer {
+    margin: 1.75rem 1rem 1rem;
+    padding: 1.4rem 1.25rem 1.5rem;
+  }
+  .myth-disclaimer-title {
+    font-size: 1.15rem;
+  }
+  .myth-disclaimer-text {
+    font-size: 0.96rem;
+    text-align: left;
+  }
+}
