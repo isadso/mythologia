@@ -363,18 +363,54 @@
    con `background: url('img/maya-trad.jpg') center/cover no-repeat;`. */
 .bg-maya-trad {
   background:
-    radial-gradient(ellipse at 30% 35%, rgba(58, 165, 112, 0.55), transparent 60%),
-    radial-gradient(ellipse at 75% 75%, rgba(232, 168, 64, 0.30), transparent 60%),
+    radial-gradient(
+      ellipse at 30% 35%,
+      rgba(58, 165, 112, 0.55),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 75% 75%,
+      rgba(232, 168, 64, 0.3),
+      transparent 60%
+    ),
     linear-gradient(160deg, #0a1f14 0%, #1a3a28 40%, #0d251a 75%, #050f0a 100%);
 }
- 
+
 /* ── Card "Azteca" della hub Maya & Azteca ──
    Placeholder con gradiente rosso-ossidiana/oro-Sole.
    Quando avrai un'immagine: sostituisci tutta la riga `background:`
    con `background: url('img/azteca-trad.jpg') center/cover no-repeat;`. */
 .bg-azteca-trad {
   background:
-    radial-gradient(ellipse at 30% 30%, rgba(200, 48, 42, 0.55), transparent 60%),
-    radial-gradient(ellipse at 70% 70%, rgba(245, 168, 60, 0.32), transparent 60%),
+    radial-gradient(
+      ellipse at 30% 30%,
+      rgba(200, 48, 42, 0.55),
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 70% 70%,
+      rgba(245, 168, 60, 0.32),
+      transparent 60%
+    ),
     linear-gradient(160deg, #1f0a08 0%, #3a1410 40%, #2a0a08 75%, #0f0404 100%);
+}
+
+.mph-bg-norse {
+  background:
+    radial-gradient(
+      ellipse at 25% 20%,
+      rgba(140, 175, 210, 0.32) 0%,
+      transparent 55%
+    ),
+    radial-gradient(
+      ellipse at 78% 78%,
+      rgba(200, 150, 70, 0.22) 0%,
+      transparent 60%
+    ),
+    radial-gradient(
+      ellipse at 50% 100%,
+      rgba(60, 80, 110, 0.45) 0%,
+      transparent 70%
+    ),
+    linear-gradient(160deg, #0a141f 0%, #1a2a3f 35%, #2a3a55 60%, #0e1a2a 100%);
 }
